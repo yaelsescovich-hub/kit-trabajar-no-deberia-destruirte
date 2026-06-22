@@ -1,0 +1,605 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Herramientas · Trabajar no debería destruirte</title>
+<meta name="description" content="Herramientas digitales del libro Trabajar no debería destruirte, de Yael Sescovich.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F7F4EE;--card:#FCFAF5;--ink:#1B1B1A;--muted:#5C584F;
+  --navy:#22255A;--mustard:#C0901F;--green:#5E8F2A;--brick:#B0532B;--deep:#8A2D22;
+  --line:#DED7C7;--line2:#CFC6B2;
+  --serif:'EB Garamond',Georgia,'Times New Roman',serif;
+  --mono:'IBM Plex Mono',ui-monospace,Menlo,Consolas,monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);font-size:18px;line-height:1.55;font-weight:400;-webkit-font-smoothing:antialiased;}
+.wrap{max-width:660px;margin:0 auto;padding:30px 22px 70px;}
+.eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.2em;font-size:.66rem;color:var(--mustard);font-weight:500;margin:0 0 14px;}
+h1{font-family:var(--serif);font-weight:600;color:var(--navy);line-height:1.04;font-size:2.35rem;letter-spacing:-.01em;margin:0 0 6px;}
+h1 .sub{display:block;font-size:1.15rem;font-weight:500;font-style:italic;color:var(--ink);margin-top:10px;letter-spacing:0;}
+.byline{font-family:var(--mono);font-size:.72rem;letter-spacing:.08em;color:var(--muted);margin:14px 0 0;text-transform:uppercase;}
+.lead{color:var(--muted);font-size:1.06rem;margin:22px 0 30px;}
+.toc{margin:6px 0 0;}
+.toc-item{display:flex;align-items:flex-start;gap:16px;width:100%;text-align:left;background:none;border:0;border-top:1px solid var(--line2);padding:20px 2px;cursor:pointer;font-family:inherit;color:inherit;transition:padding-left .18s ease;}
+.toc-item:last-child{border-bottom:1px solid var(--line2);}
+.toc-num{font-family:var(--mono);font-size:.82rem;color:var(--navy);font-weight:600;padding-top:6px;min-width:24px;}
+.toc-body{flex:1;}.toc-title{display:block;font-size:1.32rem;color:var(--navy);font-weight:600;line-height:1.12;}
+.toc-desc{display:block;color:var(--muted);font-size:.96rem;margin-top:4px;}
+.toc-arrow{font-family:var(--mono);color:var(--mustard);align-self:center;font-size:1.1rem;transition:transform .18s ease;}
+.toc-item:hover{padding-left:8px;}.toc-item:hover .toc-arrow{transform:translateX(4px);}
+.view{display:none;}.view.active{display:block;animation:fade .32s ease both;}
+@keyframes fade{from{opacity:0;transform:translateY(8px);}to{opacity:1;transform:none;}}
+.back{display:inline-flex;align-items:center;gap:7px;font-family:var(--mono);font-size:.74rem;letter-spacing:.06em;text-transform:uppercase;color:var(--navy);background:none;border:0;cursor:pointer;padding:6px 0;margin-bottom:18px;}
+.back:hover{color:var(--mustard);}
+.tool-eyebrow{font-family:var(--mono);text-transform:uppercase;letter-spacing:.18em;font-size:.64rem;color:var(--mustard);font-weight:500;}
+h2{font-family:var(--serif);font-weight:600;color:var(--navy);font-size:1.85rem;line-height:1.08;margin:8px 0 8px;}
+.tool-intro{color:var(--muted);font-size:1.02rem;margin:0 0 18px;}
+.legend{font-family:var(--mono);font-size:.72rem;color:var(--muted);background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 13px;margin:0 0 8px;line-height:1.5;}
+.qcat{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.68rem;color:var(--navy);font-weight:600;margin:26px 0 2px;padding-top:14px;border-top:2px solid var(--navy);}
+.q{padding:15px 0 5px;border-top:1px solid var(--line);}.qcat + .q{border-top:0;}
+.qtext{margin:0 0 11px;font-size:1.05rem;line-height:1.4;}
+.opts{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:6px;}
+.opt{flex:1 1 28%;position:relative;}
+.opt input{position:absolute;opacity:0;width:0;height:0;}
+.opt span{display:block;text-align:center;font-family:var(--mono);font-size:.74rem;letter-spacing:.01em;padding:9px 6px;border:1px solid var(--line2);border-radius:9px;color:var(--muted);background:var(--card);cursor:pointer;transition:all .14s ease;line-height:1.2;}
+.opt input:checked + span{background:var(--navy);color:#fff;border-color:var(--navy);font-weight:500;}
+.opt input:focus-visible + span{outline:2px solid var(--mustard);outline-offset:2px;}
+.opt span:hover{border-color:var(--navy);}
+.btn{display:inline-block;width:100%;text-align:center;background:var(--navy);color:#fff;border:0;font-family:var(--mono);font-size:.82rem;letter-spacing:.06em;text-transform:uppercase;font-weight:500;padding:15px;border-radius:11px;cursor:pointer;margin-top:22px;transition:background .15s ease;}
+.btn:hover{background:#171a44;}
+.btn-ghost{background:none;color:var(--navy);border:1.5px solid var(--navy);margin-top:12px;}
+.btn-ghost:hover{background:var(--navy);color:#fff;}
+.warn{font-family:var(--mono);font-size:.74rem;color:var(--brick);text-align:center;margin-top:12px;min-height:1.1em;}
+.result{display:none;margin-top:26px;}.result.show{display:block;animation:fade .34s ease both;}
+.res-head{text-align:center;padding:6px 0 4px;}
+.res-score{font-family:var(--mono);font-size:3.1rem;font-weight:600;color:var(--navy);line-height:1;}
+.res-score small{font-size:1.1rem;color:var(--muted);font-weight:400;}
+.chip{display:inline-block;font-family:var(--mono);font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;color:#fff;padding:6px 14px;border-radius:30px;margin-top:12px;}
+.scale{display:flex;height:11px;border-radius:6px;overflow:hidden;margin:26px 0 6px;border:1px solid var(--line2);}
+.scale i{flex:1;display:block;}
+.scale-wrap{position:relative;margin:0 0 6px;}
+.marker{position:absolute;top:-7px;transform:translateX(-50%);font-size:.8rem;color:var(--ink);transition:left .6s cubic-bezier(.2,.8,.2,1);}
+.scale-labels{display:flex;justify-content:space-between;font-family:var(--mono);font-size:.58rem;color:var(--muted);letter-spacing:.04em;text-transform:uppercase;margin-top:3px;}
+.res-text{font-size:1.06rem;line-height:1.5;margin:22px 0 6px;}
+.breakdown{margin:24px 0 0;}
+.bd-title{font-family:var(--mono);text-transform:uppercase;letter-spacing:.14em;font-size:.66rem;color:var(--navy);font-weight:600;margin:0 0 10px;}
+.bd-row{margin:13px 0;}
+.bd-top{display:flex;justify-content:space-between;align-items:baseline;font-size:.96rem;margin-bottom:5px;}
+.bd-top b{font-weight:500;}.bd-pct{font-family:var(--mono);font-size:.78rem;color:var(--muted);}
+.bar{height:8px;background:var(--line);border-radius:5px;overflow:hidden;}
+.bar i{display:block;height:100%;border-radius:5px;transition:width .6s cubic-bezier(.2,.8,.2,1);}
+.bd-hint{font-size:.9rem;color:var(--muted);margin-top:5px;font-style:italic;}
+.flagged{background:#fff;border:1px solid var(--line2);border-radius:10px;padding:11px 13px;}
+.disc{font-size:.86rem;color:var(--muted);border-top:1px solid var(--line);margin-top:24px;padding-top:14px;font-style:italic;}
+.type-card{display:flex;gap:16px;align-items:center;margin:8px 0 4px;}
+.type-num{flex:none;width:62px;height:62px;border-radius:50%;background:var(--navy);color:#fff;font-family:var(--mono);font-size:1.7rem;font-weight:600;display:flex;align-items:center;justify-content:center;}
+.type-name{font-size:1.5rem;color:var(--navy);font-weight:600;line-height:1.05;}
+.type-tag{font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.12em;color:var(--mustard);margin-top:3px;}
+.type-block{margin:16px 0;}
+.type-lbl{font-family:var(--mono);text-transform:uppercase;letter-spacing:.12em;font-size:.62rem;color:var(--navy);font-weight:600;}
+.type-val{font-size:1.02rem;margin-top:2px;}
+.rank{margin-top:8px;}
+.rank-row{display:flex;align-items:center;gap:10px;margin:8px 0;font-size:.92rem;}
+.rank-n{font-family:var(--mono);font-size:.78rem;color:var(--navy);min-width:54px;font-weight:500;}
+.rank-bar{flex:1;height:7px;background:var(--line);border-radius:5px;overflow:hidden;}
+.rank-bar i{display:block;height:100%;background:var(--mustard);border-radius:5px;transition:width .6s ease;}
+.rank-row.top .rank-bar i{background:var(--navy);}.rank-row.top{font-weight:500;}
+.tpl{background:var(--card);border:1px solid var(--line2);border-radius:13px;padding:18px;margin:16px 0;}
+.tpl-head{display:flex;justify-content:space-between;align-items:center;gap:12px;margin-bottom:12px;}
+.tpl-title{font-family:var(--mono);text-transform:uppercase;letter-spacing:.1em;font-size:.68rem;color:var(--navy);font-weight:600;}
+.copy{font-family:var(--mono);font-size:.68rem;letter-spacing:.06em;text-transform:uppercase;background:none;border:1px solid var(--navy);color:var(--navy);border-radius:8px;padding:7px 12px;cursor:pointer;white-space:nowrap;transition:all .15s ease;}
+.copy:hover{background:var(--navy);color:#fff;}
+.tpl pre{white-space:pre-wrap;font-family:var(--serif);font-size:1rem;line-height:1.5;margin:0;color:var(--ink);}
+.tpl pre b{color:var(--navy);}
+.progress-box{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:15px 16px;margin:6px 0 22px;}
+.progress-top{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:9px;}
+.progress-n{font-family:var(--mono);font-size:.95rem;color:var(--navy);font-weight:600;}
+.progress-lbl{font-family:var(--mono);font-size:.66rem;text-transform:uppercase;letter-spacing:.1em;color:var(--muted);}
+.progress-bar{height:9px;background:var(--line);border-radius:6px;overflow:hidden;}
+.progress-bar i{display:block;height:100%;background:var(--green);border-radius:6px;transition:width .4s ease;width:0;}
+.chk-cat{font-family:var(--mono);text-transform:uppercase;letter-spacing:.13em;font-size:.66rem;color:var(--navy);font-weight:600;margin:24px 0 4px;padding-top:13px;border-top:2px solid var(--navy);}
+.chk{display:flex;gap:12px;align-items:flex-start;padding:13px 0;border-top:1px solid var(--line);cursor:pointer;}
+.chk-cat + .chk{border-top:0;}
+.chk input{position:absolute;opacity:0;width:0;height:0;}
+.box{flex:none;width:23px;height:23px;border:1.6px solid var(--navy);border-radius:6px;margin-top:1px;display:flex;align-items:center;justify-content:center;transition:all .15s ease;}
+.box::after{content:"";width:11px;height:6px;border-left:2.4px solid #fff;border-bottom:2.4px solid #fff;transform:rotate(-45deg) scale(0);margin-top:-2px;transition:transform .15s ease;}
+.chk input:checked + .box{background:var(--navy);}.chk input:checked + .box::after{transform:rotate(-45deg) scale(1);}
+.chk input:focus-visible + .box{outline:2px solid var(--mustard);outline-offset:2px;}
+.chk-text{font-size:1.02rem;line-height:1.4;}
+.chk input:checked ~ .chk-text{color:var(--muted);text-decoration:line-through;text-decoration-color:var(--line2);}
+.foot{border-top:1px solid var(--line2);margin-top:46px;padding-top:26px;text-align:center;}
+.foot .eyebrow{margin-bottom:16px;}
+.mailto{display:inline-block;background:var(--mustard);color:#fff;font-family:var(--mono);font-size:.78rem;letter-spacing:.05em;text-transform:uppercase;font-weight:500;text-decoration:none;padding:13px 22px;border-radius:11px;transition:background .15s ease;}
+.mailto:hover{background:#a87c16;}
+.foot-note{font-size:.86rem;color:var(--muted);margin:22px auto 0;max-width:520px;line-height:1.5;}
+.foot-brand{font-family:var(--mono);font-size:.66rem;letter-spacing:.08em;text-transform:uppercase;color:var(--line2);margin-top:18px;}
+@media(max-width:430px){body{font-size:17px;}.wrap{padding:24px 18px 60px;}h1{font-size:2rem;}.opt{flex:1 1 30%;}.opt span{font-size:.7rem;padding:9px 4px;}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;animation:none!important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <section id="home" class="view active">
+    <p class="eyebrow">Herramientas del libro</p>
+    <h1>Trabajar no debería destruirte<span class="sub">Caja de herramientas</span></h1>
+    <p class="byline">Por Yael Sescovich</p>
+    <p class="lead">Seis herramientas para llevar el libro a la práctica. Los cuatro tests se califican solos y te dan un resultado descargable; las plantillas se copian con un toque y el checklist se marca a medida que avanzas.</p>
+    <nav class="toc" id="toc"></nav>
+    <div class="foot">
+      <p class="eyebrow">¿Conversamos?</p>
+      <a class="mailto" href="mailto:yaelsescovich@fourtms.com?subject=Quiero%20agendar%20una%20reuni%C3%B3n">Escríbeme para agendar una reunión</a>
+      <p class="foot-note">Estas herramientas acompañan al libro <i>Trabajar no debería destruirte</i> y son una guía de autoconocimiento y gestión, no un diagnóstico clínico ni una asesoría legal.</p>
+      <p class="foot-brand">4T Management Solutions</p>
+    </div>
+  </section>
+
+  <section id="t-burnout" class="view">
+    <button class="back" onclick="go('home')">← Volver</button>
+    <p class="tool-eyebrow">Test 01</p>
+    <h2>Test de pre-burnout</h2>
+    <p class="tool-intro">15 preguntas agrupadas en 4 dimensiones. Mide tu nivel de desgaste hoy y te muestra en qué área está concentrado.</p>
+    <p class="legend">Marca lo que mejor representa tu experiencia en el trabajo durante el último mes.</p>
+    <div id="bo-form"></div>
+    <button class="btn" onclick="resBurnout()">Ver mi resultado</button>
+    <p class="warn" id="bo-warn"></p>
+    <div class="result" id="bo-res"></div>
+  </section>
+
+  <section id="t-enea" class="view">
+    <button class="back" onclick="go('home')">← Volver</button>
+    <p class="tool-eyebrow">Test 02</p>
+    <h2>Test de eneagrama</h2>
+    <p class="tool-intro">27 frases para descubrir tu tipo dominante. Responde por instinto, según cuánto te identifica cada una.</p>
+    <p class="legend">Marca cuánto te identifica cada frase sobre cómo eres tú en el trabajo.</p>
+    <div id="en-form"></div>
+    <button class="btn" onclick="resEnea()">Ver mi tipo</button>
+    <p class="warn" id="en-warn"></p>
+    <div class="result" id="en-res"></div>
+  </section>
+
+  <section id="t-entorno" class="view">
+    <button class="back" onclick="go('home')">← Volver</button>
+    <p class="tool-eyebrow">Test 03</p>
+    <h2>Autodiagnóstico de tu entorno laboral</h2>
+    <p class="tool-intro">14 preguntas sobre tu trabajo o tu equipo. Mide si tu entorno nutre o desgasta, y qué dimensiones conviene intervenir primero.</p>
+    <p class="legend">Marca lo que mejor describe tu entorno de trabajo hoy.</p>
+    <div id="ev-form"></div>
+    <button class="btn" onclick="resEntorno()">Ver mi resultado</button>
+    <p class="warn" id="ev-warn"></p>
+    <div class="result" id="ev-res"></div>
+  </section>
+
+  <section id="t-clima" class="view">
+    <button class="back" onclick="go('home')">← Volver</button>
+    <p class="tool-eyebrow">Test 04</p>
+    <h2>Test de impacto en el clima</h2>
+    <p class="tool-intro">Para líderes: 16 preguntas sobre cómo lideras y cómo impacta tu estilo en el clima de tu equipo. Responde con honestidad; el resultado solo lo ves tú.</p>
+    <p class="legend">Marca la frecuencia con que haces cada una de estas cosas en tu día a día como líder.</p>
+    <div id="cl-form"></div>
+    <button class="btn" onclick="resClima()">Ver mi resultado</button>
+    <p class="warn" id="cl-warn"></p>
+    <div class="result" id="cl-res"></div>
+  </section>
+
+  <section id="t-tpl" class="view">
+    <button class="back" onclick="go('home')">← Volver</button>
+    <p class="tool-eyebrow">Herramienta 05</p>
+    <h2>Plantillas listas para usar</h2>
+    <p class="tool-intro">Tres formatos para activar las prácticas más importantes del método. Edita lo que está entre corchetes, copia y envía.</p>
+    <div id="tpl-list"></div>
+  </section>
+
+  <section id="t-chk" class="view">
+    <button class="back" onclick="go('home')">← Volver</button>
+    <p class="tool-eyebrow">Herramienta 06</p>
+    <h2>Checklist del líder</h2>
+    <p class="tool-intro">Doce decisiones concretas para proteger a tu equipo del desgaste. Marca lo que ya aplicas.</p>
+    <div class="progress-box">
+      <div class="progress-top"><span class="progress-n" id="chk-count">0 de 12</span><span class="progress-lbl">aplicadas</span></div>
+      <div class="progress-bar"><i id="chk-fill"></i></div>
+    </div>
+    <div id="chk-list"></div>
+  </section>
+</div>
+
+<script>
+function go(id){document.querySelectorAll('.view').forEach(v=>v.classList.remove('active'));document.getElementById(id).classList.add('active');window.scrollTo({top:0,behavior:'instant'});}
+
+const FREQ=["Nunca","Casi nunca","A veces","Casi siempre","Siempre"];
+const AGREE=["Nada","Poco","Algo","Bastante","Mucho"];
+const FREQI=["Siempre","Casi siempre","A veces","Casi nunca","Nunca"]; // inverted for clima
+
+/* ========== DATA ========== */
+const burnout={cats:[
+  {name:"Agotamiento físico y mental",items:[
+    "Termino la jornada sin energía para mi vida personal.",
+    "Empiezo la semana ya cansado, sin haber descansado de verdad.",
+    "Tengo síntomas físicos (dolores de cabeza, tensión, malestar) en días de trabajo.",
+    "Duermo mal o me cuesta descansar por temas del trabajo.",
+    "Las pausas y el tiempo libre no me alcanzan para recuperarme."]},
+  {name:"Desconexión y desmotivación",items:[
+    "Hago las tareas en piloto automático, sin que me importen como antes.",
+    "He dejado de proponer ideas o de involucrarme como antes.",
+    "Pienso seguido en que me gustaría renunciar o cambiar de trabajo.",
+    "Me he vuelto más irritable o impaciente de lo habitual."]},
+  {name:"Carga y control",items:[
+    "Siento que el trabajo nunca se termina, por más que avance.",
+    "Vivo en urgencia constante, todo es para ayer.",
+    "Siento que no tengo control sobre cómo organizo mi trabajo."]},
+  {name:"Límites y reconocimiento",items:[
+    "Reviso mensajes o correos de trabajo fuera de mi horario.",
+    "Se espera que esté disponible casi siempre, incluso fuera de hora.",
+    "Siento que mi esfuerzo no se nota ni se reconoce."]}
+]};
+const burnoutBands=[
+  {min:0,max:14,label:"Bajo riesgo",color:"var(--green)",text:"Tu nivel de desgaste hoy es manejable. Mantén lo que funciona y vuelve a este test en períodos de mayor carga."},
+  {min:15,max:29,label:"Señales de alerta",color:"var(--mustard)",text:"Hay desgaste acumulándose. Es el mejor momento para actuar: protege dos bloques de foco al día, corta los mensajes fuera de horario y saca de tu semana lo que no aporta."},
+  {min:30,max:44,label:"Riesgo alto",color:"var(--brick)",text:"Varias señales encendidas. Tu sistema de trabajo te pide más de lo sostenible. Prioriza: baja la carga real, recupera el control sobre tu agenda y conversa con tu jefatura sobre lo que se puede rediseñar."},
+  {min:45,max:60,label:"Riesgo muy alto",color:"var(--deep)",text:"El desgaste es serio y sostenido. Da pasos concretos esta semana para bajar la carga y pon tu descanso como prioridad. Si el malestar se mantiene, busca el apoyo de un profesional."}
+];
+
+const entorno={cats:[
+  {name:"Carga y foco",hint:"Revisa la capacidad real y saca el trabajo de bajo valor.",items:[
+    "La carga del equipo supera lo que se puede hacer en la jornada.",
+    "Vivimos en urgencia constante, todo es para ayer.",
+    "Hay tantas reuniones que cuesta hacer el trabajo real."]},
+  {name:"Autonomía",hint:"Define qué puede decidir cada uno sin pedir permiso.",items:[
+    "Hay que pedir permiso para decisiones que el cargo ya debería poder tomar.",
+    "Se vigila más el cómo (estar conectado, las horas) que los resultados."]},
+  {name:"Claridad de rol",hint:"Pon por escrito las 3 métricas y los límites de decisión.",items:[
+    "No está claro por qué se evalúa a cada uno ni hasta dónde puede decidir.",
+    "Las prioridades cambian todo el tiempo sin aviso."]},
+  {name:"Desconexión",hint:"Corta los mensajes fuera de hora; usa el envío programado.",items:[
+    "Se envían o reciben mensajes de trabajo fuera de horario con frecuencia.",
+    "Se espera estar disponible casi siempre."]},
+  {name:"Seguridad psicológica",hint:"Ante el error, cambia la pregunta: del culpable al sistema.",items:[
+    "Cuando algo sale mal, se buscan culpables más que soluciones.",
+    "La gente evita decir lo que piensa o reportar errores por miedo.",
+    "Cada quien se cuida solo; falta apoyo en el equipo."]},
+  {name:"Reconocimiento y señales",hint:"Haz visible el buen trabajo, no solo lo que falla.",items:[
+    "El buen trabajo pasa desapercibido; solo se nota lo que falla.",
+    "Se ha ido gente buena o varios están con un pie afuera."]}
+]};
+const entornoBands=[
+  {min:0,max:13,label:"Tu entorno nutre",color:"var(--green)",text:"Tu entorno está bien diseñado: carga razonable, claridad y descanso respetado. Cuídalo, porque es más raro de lo que parece."},
+  {min:14,max:27,label:"Zona de alerta",color:"var(--mustard)",text:"Tu entorno funciona, pero tiene fricciones que conviene corregir antes de que escalen."},
+  {min:28,max:41,label:"Entorno que desgasta",color:"var(--brick)",text:"Tu entorno está exigiendo de más en varios frentes. Las dimensiones marcadas son por dónde empezar a intervenir."},
+  {min:42,max:56,label:"Alto desgaste",color:"var(--deep)",text:"Tu entorno está quemando a la gente de forma sistemática. Hay que intervenir el diseño ya."}
+];
+
+/* CLIMA DEL LÍDER (inverted: Siempre=0, Nunca=4 → higher = worse) */
+const clima={cats:[
+  {name:"Comunicación y disponibilidad",hint:"El equipo necesita saber qué esperas y cuándo descansas.",items:[
+    "Respeto la desconexión de mi equipo fuera de horario.",
+    "Programo los mensajes para que lleguen en horario hábil.",
+    "Comparto las prioridades por escrito, con claridad.",
+    "Doy espacio para que mi equipo haga preguntas sin sentirse mal."]},
+  {name:"Carga y foco",hint:"Si tu equipo vive en urgencia, la fuente eres tú.",items:[
+    "Reviso la carga antes de asignar algo nuevo.",
+    "Protejo los bloques de foco de mi equipo, sin agendar encima.",
+    "Cancelo o acorto las reuniones que no llevan a una decisión.",
+    "Elimino tareas de bajo valor cuando detecto que sobran."]},
+  {name:"Confianza y error",hint:"Cómo reaccionas al error define el clima más que cualquier política.",items:[
+    "Ante un error, pregunto qué del proceso falló, no quién tuvo la culpa.",
+    "Mi equipo se siente seguro para decir cuando algo no funciona.",
+    "Reconozco mis propios errores frente al equipo.",
+    "Doy feedback directo, con respeto y en privado."]},
+  {name:"Ejemplo y coherencia",hint:"Tu equipo copia lo que haces, no lo que dices.",items:[
+    "Cumplo las mismas reglas que le pido al equipo (horarios, foco, desconexión).",
+    "Cuando digo que algo puede esperar, de verdad dejo que espere.",
+    "Reconozco el buen trabajo y no solo lo que falla.",
+    "Mido mi gestión también por el clima y la rotación, no solo por los resultados."]}
+]};
+const climaBands=[
+  {min:0,max:15,label:"Liderazgo que protege",color:"var(--green)",text:"Tu estilo de liderazgo cuida activamente el clima y la capacidad de tu equipo. Sostenlo; la coherencia es lo que convierte un buen mes en una cultura."},
+  {min:16,max:31,label:"Zonas de ajuste",color:"var(--mustard)",text:"Hay buenas prácticas instaladas, pero algunas áreas empujan al equipo hacia el desgaste. Las dimensiones más altas te dicen dónde tu estilo todavía contradice tu intención."},
+  {min:32,max:47,label:"Impacto negativo visible",color:"var(--brick)",text:"Tu forma de liderar está generando fricción significativa. El equipo probablemente trabaja desde el cumplimiento, no desde el compromiso. Mira las dimensiones de mayor riesgo y elige una para cambiar esta semana."},
+  {min:48,max:64,label:"Clima en riesgo",color:"var(--deep)",text:"Tu estilo está dañando el clima de forma sostenida. No es intención: es efecto. Conviene pedir feedback directo al equipo, idealmente con alguien externo, y priorizar los cambios que aparecen en las dimensiones más altas."}
+];
+
+const enneaItems=[
+  {t:1,q:"Me fijo mucho en los errores, los míos y los de los demás."},
+  {t:2,q:"Me cuesta decir que no cuando alguien me necesita."},
+  {t:3,q:"Mido bastante mi valor por mis logros y resultados."},
+  {t:4,q:"Siento que soy distinto al resto y a veces incomprendido."},
+  {t:5,q:"Necesito mi espacio y tiempo a solas para recargar."},
+  {t:6,q:"Tiendo a anticipar los problemas y los peores escenarios."},
+  {t:7,q:"Busco variedad y me aburro rápido con la rutina."},
+  {t:8,q:"Me cuesta mostrarme vulnerable o pedir ayuda."},
+  {t:9,q:"Evito los conflictos para mantener la paz."},
+  {t:1,q:"Tengo una voz interna que me exige hacer las cosas bien."},
+  {t:2,q:"Suelo poner las necesidades de otros antes que las mías."},
+  {t:3,q:"Me importa la imagen de éxito que proyecto."},
+  {t:4,q:"Le doy mucha importancia a que las cosas tengan sentido y profundidad."},
+  {t:5,q:"Prefiero observar y entender antes de involucrarme."},
+  {t:6,q:"Valoro mucho la confianza y la lealtad."},
+  {t:7,q:"Me cuesta comprometerme con una sola cosa por mucho tiempo."},
+  {t:8,q:"Tiendo a tomar el control de las situaciones."},
+  {t:9,q:"Me cuesta priorizar lo mío; me adapto a lo que otros quieren."},
+  {t:1,q:"Me cuesta soltar el control sobre la calidad de un trabajo."},
+  {t:2,q:"Me gusta sentir que soy indispensable para los demás."},
+  {t:3,q:"Me cuesta parar; siempre estoy buscando la próxima meta."},
+  {t:4,q:"Tiendo a la melancolía o a sentir que me falta algo."},
+  {t:5,q:"Me cuesta compartir lo que siento; guardo mi energía."},
+  {t:6,q:"Me cuesta decidir sin asegurarme muy bien antes."},
+  {t:7,q:"Evito las emociones difíciles llenando mi agenda de planes."},
+  {t:8,q:"Defiendo con fuerza lo que considero justo."},
+  {t:9,q:"A veces postergo o me desconecto para no enfrentar tensiones."}
+];
+const TYPES={
+  1:{name:"El Perfeccionista",motor:"hacer lo correcto",miedo:"equivocarse, ser defectuoso",estres:4,ayuda:"Bajar la autoexigencia, aceptar el 'suficientemente bueno' y delegar sin rehacer."},
+  2:{name:"El Ayudador",motor:"sentirse necesario",miedo:"no ser querido",estres:8,ayuda:"Aprender a poner límites y a pedir; cuidarse primero a sí mismo."},
+  3:{name:"El Triunfador",motor:"valer por lo que logra",miedo:"fracasar, no valer",estres:9,ayuda:"Separar su valor de sus logros; permitirse parar y mostrarse real."},
+  4:{name:"El Individualista",motor:"ser auténtico y especial",miedo:"no tener identidad, ser común",estres:2,ayuda:"Conectar con lo que sí tiene y apoyarse en rutinas que estabilicen la emoción."},
+  5:{name:"El Investigador",motor:"entender y ser competente",miedo:"ser invadido, quedarse sin recursos",estres:7,ayuda:"Salir del aislamiento, compartir más y poner energía en el cuerpo y el vínculo."},
+  6:{name:"El Leal",motor:"seguridad y certeza",miedo:"quedarse sin apoyo",estres:3,ayuda:"Confiar en su criterio y decidir sin certeza total; bajar el '¿y si…?'."},
+  7:{name:"El Entusiasta",motor:"disfrutar y mantener opciones",miedo:"el dolor y la limitación",estres:1,ayuda:"Comprometerse y terminar lo empezado; quedarse con lo difícil sin huir."},
+  8:{name:"El Desafiador",motor:"control y fuerza",miedo:"ser controlado o vulnerable",estres:5,ayuda:"Permitirse la vulnerabilidad, soltar el control y cuidar la dureza con su gente."},
+  9:{name:"El Pacificador",motor:"paz y armonía",miedo:"el conflicto y perder la conexión",estres:6,ayuda:"Priorizar lo propio, decir lo que piensa y enfrentar los temas en vez de postergar."}
+};
+
+/* ========== BUILDERS ========== */
+function buildScale(rootId,data,words,prefix){
+  let html="",i=0;
+  data.cats.forEach(cat=>{
+    html+=`<div class="qcat">${cat.name}</div>`;
+    cat.items.forEach(q=>{
+      const name=prefix+i;
+      html+=`<div class="q"><p class="qtext">${q}</p><div class="opts">`;
+      words.forEach((w,v)=>{html+=`<label class="opt"><input type="radio" name="${name}" value="${v}"><span>${w}</span></label>`;});
+      html+=`</div></div>`;i++;
+    });
+  });
+  document.getElementById(rootId).innerHTML=html;
+}
+function buildEnnea(){
+  let html="";
+  enneaItems.forEach((it,i)=>{
+    html+=`<div class="q"><p class="qtext">${it.q}</p><div class="opts">`;
+    AGREE.forEach((w,v)=>{html+=`<label class="opt"><input type="radio" name="en${i}" value="${v}"><span>${w}</span></label>`;});
+    html+=`</div></div>`;
+  });
+  document.getElementById('en-form').innerHTML=html;
+}
+
+/* ========== SCORING ========== */
+function scoreScale(data,prefix){
+  let i=0,answered=0,perCat=[];
+  data.cats.forEach(cat=>{
+    let s=0;
+    cat.items.forEach(()=>{
+      const el=document.querySelector(`input[name="${prefix+i}"]:checked`);
+      if(el){s+=+el.value;answered++;}i++;
+    });
+    perCat.push({name:cat.name,sum:s,max:cat.items.length*4,hint:cat.hint||""});
+  });
+  return{total:perCat.reduce((a,c)=>a+c.sum,0),max:i*4,answered,count:i,perCat};
+}
+function bandOf(bands,total){return bands.find(b=>total>=b.min&&total<=b.max)||bands[bands.length-1];}
+
+function scaleHTML(total,max,band,bands){
+  const pct=Math.max(2,Math.min(98,(total/max)*100));
+  let seg="";bands.forEach(b=>{const w=((b.max-b.min+1)/(max+1))*100;seg+=`<i style="background:${b.color};flex:0 0 ${w}%"></i>`;});
+  return`<div class="scale-wrap"><div class="marker" style="left:${pct}%">▾</div><div class="scale">${seg}</div><div class="scale-labels"><span>0</span><span>${max}</span></div></div>`;
+}
+function breakdownHTML(perCat,withHint){
+  let rows="";
+  const sorted=[...perCat].map((c,idx)=>({...c,idx})).sort((a,b)=>(b.sum/b.max)-(a.sum/a.max));
+  const worst=sorted.slice(0,2).filter(c=>c.sum/c.max>=0.5).map(c=>c.idx);
+  perCat.forEach((c,idx)=>{
+    const pct=Math.round((c.sum/c.max)*100);const flag=worst.includes(idx);
+    const color=pct<35?'var(--green)':pct<60?'var(--mustard)':pct<80?'var(--brick)':'var(--deep)';
+    rows+=`<div class="bd-row ${flag?'flagged':''}"><div class="bd-top"><b>${c.name}</b><span class="bd-pct">${c.sum}/${c.max} · ${pct}%</span></div><div class="bar"><i style="width:${pct}%;background:${color}"></i></div>${flag&&withHint&&c.hint?`<div class="bd-hint">→ ${c.hint}</div>`:''}</div>`;
+  });
+  return rows;
+}
+
+/* ========== DOWNLOAD ========== */
+function downloadResult(title,resId){
+  const el=document.getElementById(resId);if(!el)return;
+  const w=window.open('','_blank');
+  w.document.write(`<!doctype html><html><head><meta charset="utf-8"><title>${title}</title>
+    <style>body{font-family:Georgia,serif;max-width:640px;margin:30px auto;padding:0 20px;color:#1B1B1A;font-size:15px;line-height:1.55;}
+    h2{color:#22255A;margin:0 0 4px;font-size:1.6rem;}
+    .chip{display:inline-block;font-size:.72rem;text-transform:uppercase;letter-spacing:.1em;font-weight:600;color:#fff;padding:5px 13px;border-radius:20px;margin-top:8px;}
+    .bar{height:8px;background:#DED7C7;border-radius:5px;overflow:hidden;margin:4px 0;}
+    .bar i{display:block;height:100%;border-radius:5px;}
+    .bd-top{display:flex;justify-content:space-between;font-size:.92rem;margin-bottom:3px;}
+    .bd-hint{font-size:.88rem;color:#5C584F;font-style:italic;margin-top:3px;}
+    .flagged{background:#faf8f3;border:1px solid #CFC6B2;border-radius:8px;padding:8px 10px;}
+    .disc{font-size:.82rem;color:#5C584F;border-top:1px solid #DED7C7;margin-top:20px;padding-top:12px;font-style:italic;}
+    .brand{text-align:center;font-size:.7rem;color:#CFC6B2;text-transform:uppercase;letter-spacing:.08em;margin-top:30px;}
+    .type-card{display:flex;gap:14px;align-items:center;margin:6px 0;}
+    .type-num{width:50px;height:50px;border-radius:50%;background:#22255A;color:#fff;font-size:1.4rem;font-weight:600;display:flex;align-items:center;justify-content:center;}
+    .type-name{font-size:1.3rem;color:#22255A;font-weight:600;}
+    .type-tag{font-size:.64rem;text-transform:uppercase;letter-spacing:.1em;color:#C0901F;margin-top:2px;}
+    .type-block{margin:12px 0;}.type-lbl{font-size:.62rem;text-transform:uppercase;letter-spacing:.1em;color:#22255A;font-weight:600;}
+    .rank-row{display:flex;align-items:center;gap:8px;margin:5px 0;font-size:.88rem;}
+    .rank-n{min-width:50px;font-weight:500;color:#22255A;}.rank-bar{flex:1;height:6px;background:#DED7C7;border-radius:4px;overflow:hidden;}
+    .rank-bar i{display:block;height:100%;background:#C0901F;border-radius:4px;}.rank-row.top .rank-bar i{background:#22255A;}.rank-row.top{font-weight:600;}
+    .scale{display:flex;height:9px;border-radius:5px;overflow:hidden;margin:18px 0 4px;border:1px solid #CFC6B2;}.scale i{flex:1;}
+    .scale-labels{display:flex;justify-content:space-between;font-size:.56rem;color:#5C584F;text-transform:uppercase;}
+    .res-head{text-align:center;}.res-score{font-size:2.6rem;font-weight:600;color:#22255A;} .res-score small{font-size:1rem;color:#5C584F;}
+    </style></head><body>
+    <h2>${title}</h2>
+    <p style="font-size:.82rem;color:#5C584F;">Trabajar no debería destruirte · Yael Sescovich · ${new Date().toLocaleDateString('es-CL')}</p>
+    ${el.innerHTML}
+    <p class="brand">4T Management Solutions · fourtms.com</p>
+    </body></html>`);
+  w.document.close();
+  setTimeout(()=>{w.print();},600);
+}
+
+/* ========== RESULTS ========== */
+function resBurnout(){
+  const r=scoreScale(burnout,"bo");
+  if(r.answered<r.count){document.getElementById('bo-warn').textContent=`Te faltan ${r.count-r.answered} respuestas.`;return;}
+  document.getElementById('bo-warn').textContent="";
+  const band=bandOf(burnoutBands,r.total);
+  const box=document.getElementById('bo-res');
+  box.innerHTML=`<div class="res-head"><div class="res-score">${r.total}<small>/${r.max}</small></div><span class="chip" style="background:${band.color}">${band.label}</span></div>
+    ${scaleHTML(r.total,r.max,band,burnoutBands)}
+    <p class="res-text">${band.text}</p>
+    <div class="breakdown"><p class="bd-title">Por dimensión</p>${breakdownHTML(r.perCat,false)}</div>
+    <p class="disc">Este test es una guía de autoconocimiento, no un diagnóstico clínico. Si tu malestar es intenso o se mantiene, busca el apoyo de un profesional de la salud.</p>
+    <button class="btn btn-ghost" onclick="downloadResult('Test de pre-burnout','bo-res')">Descargar resultado</button>`;
+  box.classList.add('show');box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resEntorno(){
+  const r=scoreScale(entorno,"ev");
+  if(r.answered<r.count){document.getElementById('ev-warn').textContent=`Te faltan ${r.count-r.answered} respuestas.`;return;}
+  document.getElementById('ev-warn').textContent="";
+  const band=bandOf(entornoBands,r.total);
+  const box=document.getElementById('ev-res');
+  box.innerHTML=`<div class="res-head"><div class="res-score">${r.total}<small>/${r.max}</small></div><span class="chip" style="background:${band.color}">${band.label}</span></div>
+    ${scaleHTML(r.total,r.max,band,entornoBands)}
+    <p class="res-text">${band.text}</p>
+    <div class="breakdown"><p class="bd-title">Por dimensión · de mayor a menor riesgo</p>${breakdownHTML(r.perCat,true)}</div>
+    <button class="btn btn-ghost" onclick="downloadResult('Autodiagnóstico de tu entorno laboral','ev-res')">Descargar resultado</button>`;
+  box.classList.add('show');box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resClima(){
+  const r=scoreScale(clima,"cl");
+  if(r.answered<r.count){document.getElementById('cl-warn').textContent=`Te faltan ${r.count-r.answered} respuestas.`;return;}
+  document.getElementById('cl-warn').textContent="";
+  const band=bandOf(climaBands,r.total);
+  const box=document.getElementById('cl-res');
+  box.innerHTML=`<div class="res-head"><div class="res-score">${r.total}<small>/${r.max}</small></div><span class="chip" style="background:${band.color}">${band.label}</span></div>
+    ${scaleHTML(r.total,r.max,band,climaBands)}
+    <p class="res-text">${band.text}</p>
+    <div class="breakdown"><p class="bd-title">Por dimensión · de mayor a menor impacto</p>${breakdownHTML(r.perCat,true)}</div>
+    <p class="disc">Tu equipo siente el efecto de lo que haces, no de lo que dices. Mira las dimensiones más altas, elige una y cambia una conducta concreta esta semana.</p>
+    <button class="btn btn-ghost" onclick="downloadResult('Test de impacto en el clima','cl-res')">Descargar resultado</button>`;
+  box.classList.add('show');box.scrollIntoView({behavior:'smooth',block:'start'});
+}
+function resEnea(){
+  let scores={},answered=0;for(let k=1;k<=9;k++)scores[k]=0;
+  enneaItems.forEach((it,i)=>{const el=document.querySelector(`input[name="en${i}"]:checked`);if(el){scores[it.t]+=+el.value;answered++;}});
+  if(answered<enneaItems.length){document.getElementById('en-warn').textContent=`Te faltan ${enneaItems.length-answered} respuestas.`;return;}
+  document.getElementById('en-warn').textContent="";
+  const ranked=Object.keys(scores).map(k=>({t:+k,s:scores[k]})).sort((a,b)=>b.s-a.s);
+  const top=ranked[0],T=TYPES[top.t],maxScore=12;
+  let rankRows="";
+  ranked.forEach((r,idx)=>{rankRows+=`<div class="rank-row ${idx===0?'top':''}"><span class="rank-n">Tipo ${r.t}</span><span class="rank-bar"><i style="width:${(r.s/maxScore)*100}%"></i></span></div>`;});
+  document.getElementById('en-res').innerHTML=`
+    <div class="type-card"><div class="type-num">${top.t}</div><div><div class="type-name">${T.name}</div><div class="type-tag">Tu tipo dominante</div></div></div>
+    <div class="type-block"><div class="type-lbl">Motor y miedo</div><div class="type-val">Lo mueve ${T.motor}; le teme a ${T.miedo}.</div></div>
+    <div class="type-block"><div class="type-lbl">Bajo estrés</div><div class="type-val">Se desplaza hacia el lado sombra del tipo ${T.estres} (${TYPES[T.estres].name}).</div></div>
+    <div class="type-block"><div class="type-lbl">Qué te ayuda</div><div class="type-val">${T.ayuda}</div></div>
+    <div class="breakdown"><p class="bd-title">Tu perfil completo</p><div class="rank">${rankRows}</div></div>
+    <p class="disc">El eneagrama es un mapa de autoconocimiento, no una etiqueta fija. Si dos tipos quedan muy parejos, lee ambos.</p>
+    <button class="btn btn-ghost" onclick="downloadResult('Test de eneagrama','en-res')">Descargar resultado</button>`;
+  document.getElementById('en-res').classList.add('show');
+  document.getElementById('en-res').scrollIntoView({behavior:'smooth',block:'start'});
+}
+
+/* ========== PLANTILLAS ========== */
+const plantillas=[
+ {label:"Plantilla 01 · Política de reuniones",
+  text:`Asunto: Nueva política de reuniones, área [nombre]
+
+Equipo, para cuidar el tiempo y la concentración, desde hoy cambian tres reglas:
+
+Propósito único. No se agenda ninguna reunión interna sin agenda escrita enviada con 24 horas de anticipación y una decisión concreta que tomar. Las sesiones solo informativas se suspenden; eso se comparte por escrito.
+
+Duración acotada. Máximo 25 o 45 minutos. Nos obliga a ser precisos.
+
+Derecho a declinar. Cualquiera puede no asistir a una reunión sin agenda previa o donde su presencia no sea indispensable para la decisión.
+
+Les pido revisar hoy sus calendarios y cancelar las reuniones recurrentes que no cumplan este estándar. Quedo atento a sus comentarios.
+
+[Nombre]`},
+ {label:"Plantilla 02 · Desconexión y horario de comunicación",
+  text:`Asunto: Horario de comunicación y desconexión del área
+
+Equipo, para sostener el foco y el descanso, fijamos reglas claras sobre cuándo nos comunicamos:
+
+Horario de envío. Los requerimientos se envían en horario laboral. Fuera de horario y los fines de semana no se espera ni se exige respuesta.
+
+Envío programado. Si necesitas dejar algo escrito fuera de hora para no olvidarlo, hazlo, pero usa el envío programado para que llegue al inicio del día hábil siguiente.
+
+Bloques de foco. Entre [9:00 y 10:30] y entre [15:00 y 16:30] no agendamos reuniones ni llamadas internas y no se espera respuesta inmediata.
+
+Urgencias reales. Una urgencia genuina se resuelve por llamada. Si no amerita una llamada, puede esperar al horario hábil.
+
+El objetivo no es trabajar menos, sino proteger las horas en que rendimos mejor.
+
+[Nombre]`},
+ {label:"Plantilla 03 · Claridad: métricas y autonomía",
+  text:`Documento de claridad — cabe en una página. Lo completa cada persona y se acuerda con la jefatura.
+
+Cargo / responsable / período: [completar]
+
+Las tres métricas por las que se evalúa mi trabajo:
+1. [métrica 1 y su meta]
+2. [métrica 2 y su meta]
+3. [métrica 3 y su meta]
+
+Decisiones que puedo tomar por mi cuenta:
+[por ejemplo: aprobar gastos hasta cierto monto, ajustar la priorización del equipo, responder consultas de clientes dentro de cierto rango]
+
+Decisiones que debo escalar:
+[por ejemplo: gastos sobre cierto monto, compromisos de plazo con un cliente clave, cambios que afecten a otra área]
+
+Revisado y acordado con la jefatura. Fecha: [__]`}
+];
+function buildTpl(){
+  let html="";
+  plantillas.forEach((p,i)=>{html+=`<div class="tpl"><div class="tpl-head"><span class="tpl-title">${p.label}</span><button class="copy" onclick="copyTpl(${i},this)">Copiar</button></div><pre id="tpl${i}">${p.text.replace(/&/g,'&amp;').replace(/</g,'&lt;')}</pre></div>`;});
+  document.getElementById('tpl-list').innerHTML=html;
+}
+function copyTpl(i,btn){
+  const txt=plantillas[i].text;const done=()=>{btn.textContent="Copiado ✓";setTimeout(()=>btn.textContent="Copiar",1700);};
+  if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(txt).then(done).catch(()=>legacyCopy(txt,done));}else{legacyCopy(txt,done);}
+}
+function legacyCopy(txt,done){const ta=document.createElement('textarea');ta.value=txt;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done();}catch(e){}document.body.removeChild(ta);}
+
+/* ========== CHECKLIST ========== */
+const checklist=[
+ {cat:"Reuniones y foco",items:["Cancelé las reuniones recurrentes sin agenda ni decisión concreta.","Las reuniones que quedan duran 25 a 45 minutos, con agenda y un objetivo de decisión.","Instalé dos bloques de foco diarios, sin reuniones ni respuesta inmediata."]},
+ {cat:"Comunicación y desconexión",items:["Definí un canal por tipo de mensaje (chat / correo o sistema / llamada).","Programo los correos fuera de horario para que lleguen en horario hábil.","Lidero con el ejemplo: respeto yo primero la desconexión y los bloques de foco."]},
+ {cat:"Claridad y carga",items:["Cada persona tiene por escrito sus 3 métricas y hasta dónde decide sola.","Redistribuí la carga para no quemar a mis mejores personas.","Hago la auditoría de los viernes y elimino al menos una carga de bajo valor."]},
+ {cat:"Cultura del error e indicadores",items:["Ante un error, pregunto qué del sistema lo permitió, no quién tuvo la culpa.","Reviso cada mes el ausentismo y la rotación con el mismo rigor que lo financiero.","No ato el bono ni la evaluación a las licencias médicas del equipo."]}
+];
+function buildChecklist(){
+  let html="",total=0;
+  checklist.forEach(g=>{html+=`<div class="chk-cat">${g.cat}</div>`;g.items.forEach(it=>{html+=`<label class="chk"><input type="checkbox" onchange="updateChk()"><span class="box"></span><span class="chk-text">${it}</span></label>`;total++;});});
+  document.getElementById('chk-list').innerHTML=html;document.getElementById('chk-count').textContent=`0 de ${total}`;window._chkTotal=total;
+}
+function updateChk(){
+  const done=document.querySelectorAll('#chk-list input[type=checkbox]:checked').length;
+  document.getElementById('chk-count').textContent=`${done} de ${window._chkTotal}`;
+  document.getElementById('chk-fill').style.width=(done/window._chkTotal*100)+'%';
+}
+
+/* ========== TOC ========== */
+const tools=[
+ {id:'t-burnout',n:'01',t:'Test de pre-burnout',d:'Mide tu nivel de desgaste hoy, con puntaje y resultado.'},
+ {id:'t-enea',n:'02',t:'Test de eneagrama',d:'Descubre tu tipo dominante y por dónde te quiebra el estrés.'},
+ {id:'t-entorno',n:'03',t:'Autodiagnóstico de tu entorno',d:'¿Tu trabajo nutre o desgasta? Resultado por dimensión.'},
+ {id:'t-clima',n:'04',t:'Test de impacto en el clima',d:'Para líderes: mide cómo tu liderazgo afecta a tu equipo.'},
+ {id:'t-tpl',n:'05',t:'Plantillas listas para usar',d:'Reuniones, desconexión y claridad de métricas.'},
+ {id:'t-chk',n:'06',t:'Checklist del líder',d:'Doce decisiones para proteger a tu equipo.'}
+];
+function buildToc(){
+  let html="";tools.forEach(x=>{html+=`<button class="toc-item" onclick="go('${x.id}')"><span class="toc-num">${x.n}</span><span class="toc-body"><span class="toc-title">${x.t}</span><span class="toc-desc">${x.d}</span></span><span class="toc-arrow">→</span></button>`;});
+  document.getElementById('toc').innerHTML=html;
+}
+
+/* ========== INIT ========== */
+buildToc();
+buildScale('bo-form',burnout,FREQ,'bo');
+buildScale('ev-form',entorno,FREQ,'ev');
+buildScale('cl-form',clima,FREQI,'cl');
+buildEnnea();
+buildTpl();
+buildChecklist();
+</script>
+</body>
+</html>

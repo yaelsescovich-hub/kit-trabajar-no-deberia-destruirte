@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Herramientas · Trabajar no debería destruirte</title>
-<meta name="description" content="Herramientas digitales del libro Trabajar no debería destruirte, de Yael Sescovich: test de pre-burnout, eneagrama, autodiagnóstico del entorno, impacto en el clima, plantillas y checklist del líder. Cada test entrega un informe con plan de acción.">
+<meta name="description" content="Herramientas digitales del libro Trabajar no debería destruirte, de Yael Sescovich: matriz R.E.S.P.I.R.A., autoevaluaciones de pre-burnout, Eneagrama, entorno laboral e impacto en el clima, plantillas y checklist del líder. Cada informe incluye un plan de acción.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -204,7 +204,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
       <h1>Trabajar no debería destruirte</h1>
       <p class="sub">Del libro a la práctica</p>
       <p class="by">Por Yael Sescovich</p>
-      <p class="lead">Seis herramientas para llevar el libro a la acción. Los cuatro tests se califican solos y te entregan un informe con plan de acción; las plantillas se copian con un toque y el checklist se marca a medida que avanzas.</p>
+      <p class="lead">Siete herramientas para llevar el libro a la acción. La matriz R.E.S.P.I.R.A. resume el método completo en una página; las cuatro autoevaluaciones se califican solas y te entregan un informe con plan de acción; las plantillas se copian con un toque y el checklist se marca a medida que avanzas.</p>
       <p style="font-family:var(--sans);font-size:13px;color:var(--soft);background:var(--navy-soft);border-radius:10px;padding:11px 16px;max-width:520px;margin:18px auto 0;line-height:1.5">🔒 <b style="color:var(--navy)">Todo es privado.</b> Las herramientas funcionan en tu dispositivo. Tus respuestas no se guardan ni se envían a ninguna parte, y cada informe lo descargas solo tú al presionar el botón.</p>
       <hr class="rule">
     </div>
@@ -220,8 +220,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- 01 PRE-BURNOUT -->
   <section id="t-bo" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
-    <p class="eyebrow2">Test 01</p>
-    <h2>Test de pre-burnout</h2>
+    <p class="eyebrow2">Herramienta 02</p>
+    <h2>Autoevaluación orientativa de pre-burnout</h2>
     <p class="intro">15 preguntas sobre cómo has estado el último mes, en 4 dimensiones. Mide tu nivel de desgaste hoy y te muestra en qué área está concentrado, con un plan para empezar a cuidarte.</p>
     <p class="legend" id="bo-legend"></p>
     <div id="bo-form"></div>
@@ -233,12 +233,13 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- 02 ENEAGRAMA -->
   <section id="t-en" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
-    <p class="eyebrow2">Test 02</p>
-    <h2>Test de eneagrama</h2>
-    <p class="intro">27 frases para descubrir tu tipo dominante. No es una caja que te encierra: es un mapa para entender qué te mueve y por dónde te quiebra el estrés. Responde por instinto.</p>
+    <p class="eyebrow2">Herramienta 03</p>
+    <h2>Cuestionario de reflexión del Eneagrama</h2>
+    <p class="intro">27 frases para reconocer el tipo en el que más te ves. No es una caja que te encierra: es un mapa voluntario para entender qué te mueve y qué cuidar cuando aprieta el estrés. Responde por instinto.</p>
+    <p class="legend"><b>Antes de partir:</b> esta herramienta es una invitación no diagnóstica a la autoobservación. No clasifica personas, no predice desempeño y no debe usarse para contratar, evaluar, asignar tareas ni reemplazar una evaluación psicológica. La evidencia científica sobre el modelo es mixta: úsalo como lente de reflexión.</p>
     <p class="legend" id="en-legend"></p>
     <div id="en-form"></div>
-    <button class="btn" onclick="resEN()">Ver mi tipo e informe</button>
+    <button class="btn" onclick="resEN()">Ver mi informe</button>
     <p class="warn" id="en-warn"></p>
     <div class="result" id="en-res"></div>
   </section>
@@ -246,7 +247,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- 03 ENTORNO -->
   <section id="t-ev" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
-    <p class="eyebrow2">Test 03</p>
+    <p class="eyebrow2">Herramienta 04</p>
     <h2>Autodiagnóstico de tu entorno laboral</h2>
     <p class="intro">14 preguntas sobre tu trabajo o tu equipo hoy. Mide si tu entorno nutre o desgasta, y te dice qué dimensiones conviene intervenir primero.</p>
     <p class="legend" id="ev-legend"></p>
@@ -259,8 +260,8 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- 04 IMPACTO -->
   <section id="t-im" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
-    <p class="eyebrow2">Test 04 · Para líderes</p>
-    <h2>Test de impacto en el clima</h2>
+    <p class="eyebrow2">Herramienta 05 · Para líderes</p>
+    <h2>Autoevaluación de impacto en el clima</h2>
     <p class="intro">16 preguntas sobre cómo lideras y cómo impacta tu estilo en el clima de tu equipo. Responde con honestidad; el resultado solo lo ves tú, y viene con un plan a corto, mediano y largo plazo.</p>
     <p class="legend" id="im-legend"></p>
     <div id="im-form"></div>
@@ -272,7 +273,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- 05 PLANTILLAS -->
   <section id="t-tpl" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
-    <p class="eyebrow2">Herramienta 05</p>
+    <p class="eyebrow2">Herramienta 06</p>
     <h2>Plantillas listas para usar</h2>
     <p class="intro">Siete formatos para activar las prácticas más importantes del método. Toca cada una para abrirla, edita lo que está [entre corchetes], copia y envía.</p>
     <div id="tpl-list"></div>
@@ -281,11 +282,20 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- 06 CHECKLIST -->
   <section id="t-chk" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
-    <p class="eyebrow2">Herramienta 06</p>
+    <p class="eyebrow2">Herramienta 07</p>
     <h2>Checklist del líder</h2>
     <p class="intro">Veinte decisiones concretas para proteger a tu equipo del desgaste. Marca lo que ya aplicas; lo que quede sin marcar es tu lista de trabajo.</p>
     <div class="prog"><span class="ring" id="chk-ring">0/20</span><span class="pbar"><i id="chk-bar"></i></span><span class="ptxt" id="chk-txt">aplicadas</span></div>
     <div id="chk-list"></div>
+  </section>
+
+  <!-- 01 MATRIZ R.E.S.P.I.R.A. -->
+  <section id="t-mx" class="view">
+    <button class="back" onclick="go('home')">← Volver</button>
+    <p class="eyebrow2">Herramienta 01 · El método</p>
+    <h2>Matriz R.E.S.P.I.R.A. de aplicación</h2>
+    <p class="intro">El método completo del libro, en una página accionable: Reconocer, Examinar, Simplificar, Proteger, Intervenir, Revisar y Ajustar. Léela letra por letra, escribe tus propias respuestas y descárgala en PDF para tenerla a mano.</p>
+    <div class="result" id="mx-res"></div>
   </section>
 
   <!-- contenedor para impresión del informe -->
@@ -298,17 +308,19 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
 function go(id){
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active','printing'));
   var el=document.getElementById(id); el.classList.add('active');
+  if(id==='t-mx'){mxRender();}
   window.scrollTo(0,0);
 }
 
 /* ===================== HOME CARDS ===================== */
 var HOME=[
-  ['t-bo','Test 01','Test de pre-burnout','Mide tu nivel de desgaste hoy en 4 dimensiones y te muestra dónde está concentrado.','var(--terra)'],
-  ['t-en','Test 02','Test de eneagrama','Descubre tu tipo dominante: qué te mueve, por dónde te quiebra el estrés y qué trabajar.','var(--mustard)'],
-  ['t-ev','Test 03','Autodiagnóstico de tu entorno','¿Tu trabajo nutre o desgasta? Y qué dimensiones conviene intervenir primero.','var(--green)'],
-  ['t-im','Test 04 · Líderes','Test de impacto en el clima','Cómo tu estilo impacta a tu equipo, con un plan a corto, mediano y largo plazo.','var(--navy)'],
-  ['t-tpl','Herramienta 05','Plantillas listas para usar','Siete formatos para activar las prácticas del método. Edita, copia y envía.','#7a6cae'],
-  ['t-chk','Herramienta 06','Checklist del líder','Veinte decisiones concretas para proteger a tu equipo del desgaste.','#3f8e8a']
+  ['t-mx','Herramienta 01 · El método','Matriz R.E.S.P.I.R.A.','El método completo del libro en una página: señal, decisión, conversación, métrica, fecha y responsable.','#2f6f8f'],
+  ['t-bo','Herramienta 02','Autoevaluación de pre-burnout','Mide tu nivel de desgaste hoy en 4 dimensiones y te muestra dónde está concentrado. Orienta, no diagnostica.','var(--terra)'],
+  ['t-en','Herramienta 03','Cuestionario de reflexión del Eneagrama','Una lente voluntaria de autoobservación: qué te mueve y qué cuidar bajo estrés. No clasifica ni evalúa a nadie.','var(--mustard)'],
+  ['t-ev','Herramienta 04','Autodiagnóstico de tu entorno','¿Tu trabajo nutre o desgasta? Y qué dimensiones conviene intervenir primero.','var(--green)'],
+  ['t-im','Herramienta 05 · Líderes','Autoevaluación de impacto en el clima','Cómo tu estilo impacta a tu equipo, con un plan a corto, mediano y largo plazo.','var(--navy)'],
+  ['t-tpl','Herramienta 06','Plantillas listas para usar','Siete formatos para activar las prácticas del método. Edita, copia y envía.','#7a6cae'],
+  ['t-chk','Herramienta 07','Checklist del líder','Veinte decisiones concretas para proteger a tu equipo del desgaste.','#3f8e8a']
 ];
 (function(){
   var h='';
@@ -720,7 +732,7 @@ function resEN(){
   function adj(a,b){var d=Math.abs(a-b);return d===1||d===8;}
   var gapPct = sc[dom] ? Math.round((sc[dom]-sc[sec])/sc[dom]*100) : 100;
   var m=[];
-  m.push({t:'head',kicker:'Tu tipo dominante',band:D.n,color:'#22255A',summary:D.e,nogauge:true});
+  m.push({t:'head',kicker:'El tipo en el que más te reconoces',band:D.n,color:'#22255A',summary:D.e,nogauge:true});
   m.push({t:'bullets',title:'Lectura técnica',items:[
     'Tu tipo no es una etiqueta: es tu patrón por defecto bajo presión. No define lo que vales, sino por dónde reaccionas cuando aprieta.',
     'Tu mayor fortaleza y tu mayor riesgo comparten raíz: son el mismo rasgo, sano o llevado al extremo. Por eso cada tipo se quiebra de forma tan predecible como su talento.',
@@ -729,7 +741,7 @@ function resEN(){
   m.push({t:'kv',k:'Tu centro: '+C[0],v:C[1]});
   m.push({t:'kv',k:'Tu fortaleza en el trabajo',v:D.fz});
   m.push({t:'kv',k:'Tu riesgo de desgaste',v:D.rg});
-  m.push({t:'lead',title:'Tus dos líneas: estrés y crecimiento',sub:'El corazón del modelo. Tu tipo no se queda quieto: se mueve. Aprende a leer hacia dónde.'});
+  m.push({t:'lead',title:'Tus dos líneas: estrés y crecimiento',sub:'El modelo describe dos movimientos típicos por tipo. Tómalos como hipótesis para observarte, no como mecánica exacta: la evidencia sobre estos desplazamientos es mixta.'});
   m.push({t:'arrows',a:[
     {k:'Bajo estrés · línea de desintegración',color:'#C0492F',bg:'#F7E6E1',text:'Cuando el estrés te supera te desplazas hacia el lado menos sano del '+S.n+'. En ti se ve así: '+D.sTxt+' Si te pillas ahí, es la señal para parar antes de quemarte.'},
     {k:'En armonía · línea de crecimiento',color:'#4d7d16',bg:'#EEF4E4',text:'Cuando estás en equilibrio integras lo mejor del '+G.n+'. En ti se ve así: '+D.gTxt+' Ese es tu camino de crecimiento: no volverte otro, sino sumar esa cualidad.'}
@@ -1019,6 +1031,17 @@ function tglChk(i){
   document.getElementById('chk-ring').textContent=done+'/'+CHKN;
   document.getElementById('chk-bar').style.width=Math.round(done/CHKN*100)+'%';
   document.getElementById('chk-txt').textContent= done===CHKN?'¡todas aplicadas!':'aplicadas';
+}
+
+/* ===================== MATRIZ R.E.S.P.I.R.A. ===================== */
+var MX=[{"t": "head", "kicker": "EL MÉTODO DEL LIBRO, EN UNA PÁGINA", "band": "Matriz R.E.S.P.I.R.A.", "color": "#2f6f8f", "summary": "Esta es la hoja que amarra todo el libro en una página. Tómala letra por letra, no todas a la vez. Para cada una escribe tus propias respuestas: una señal, una decisión, una conversación, una métrica, una fecha y un nombre. Si una fila queda sin responsable o sin fecha, todavía no es un plan: es una intención.", "nogauge": true}, {"t": "tier", "color": "#C0492F", "title": "R — Reconocer señales y datos", "when": "Mirar de verdad: qué dice el cuerpo, qué dicen los números y qué se calla en las reuniones.", "items": ["<b>Señal que observo:</b> silencios nuevos en reuniones, irritabilidad, conexión fuera de horario.", "<b>Decisión que tomo:</b> dejar de normalizar esa señal y ponerla sobre la mesa esta semana.", "<b>Conversación que sostengo:</b> \"He notado esto. ¿Cómo lo estás viviendo tú?\"", "<b>Métrica que reviso:</b> licencias, rotación y conexión fuera de jornada.", "<b>Fecha de seguimiento:</b> dentro de los próximos 14 días.", "<b>Responsable:</b> un nombre y apellido; \"todos\" no cuenta."]}, {"t": "tier", "color": "#E07B39", "title": "E — Examinar el diseño del trabajo", "when": "El desgaste casi nunca es gente débil: es cómo está armada la pega.", "items": ["<b>Señal que observo:</b> en ese puesto se quema todo el que llega, sea quien sea.", "<b>Decisión que tomo:</b> revisar carga, autonomía, claridad de rol y aislamiento de ese puesto.", "<b>Conversación que sostengo:</b> con quien hace la tarea: qué parte de su pega no agrega valor.", "<b>Métrica que reviso:</b> horas de reunión semanales y tareas de bajo valor eliminadas.", "<b>Fecha de seguimiento:</b> al cierre del mes.", "<b>Responsable:</b> la jefatura directa del puesto examinado."]}, {"t": "tier", "color": "#D8A828", "title": "S — Simplificar carga, flujos y reuniones", "when": "Sacar lo que no suma. Menos ruido, más foco.", "items": ["<b>Señal que observo:</b> agendas llenas y el trabajo real postergado a la noche.", "<b>Decisión que tomo:</b> auditar las reuniones recurrentes, eliminar o rediseñar las que no tengan propósito ni decisión, e instalar bloques de foco.", "<b>Conversación que sostengo:</b> con el equipo: qué reunión eliminamos primero y qué pasa a asincrónico.", "<b>Métrica que reviso:</b> número de reuniones y correos fuera de horario, antes y después.", "<b>Fecha de seguimiento:</b> a las dos semanas del cambio.", "<b>Responsable:</b> quien convoca las reuniones que se eliminan."]}, {"t": "tier", "color": "#6FA52C", "title": "P — Proteger límites, dignidad y canales seguros", "when": "Que desconectarse no cueste caro y que levantar la mano no sea un acto de valentía.", "items": ["<b>Señal que observo:</b> nadie usa los canales de denuncia, o se responden correos a medianoche.", "<b>Decisión que tomo:</b> reglas explícitas de desconexión y resguardo desde el día uno ante cualquier denuncia.", "<b>Conversación que sostengo:</b> con las jefaturas: qué conducta no se tolera, traiga los resultados que traiga.", "<b>Métrica que reviso:</b> uso y confianza en los canales; denuncias atendidas en plazo.", "<b>Fecha de seguimiento:</b> revisión trimestral, con o sin denuncias.", "<b>Responsable:</b> quien lidera Personas, con respaldo visible de la dirección."]}, {"t": "tier", "color": "#3f8e8a", "title": "I — Intervenir conversaciones y prioridades", "when": "La conversación que vienes postergando es la intervención más barata y más potente.", "items": ["<b>Señal que observo:</b> una conversación pendiente que llevo semanas postergando.", "<b>Decisión que tomo:</b> agendarla antes del viernes, con el protocolo E.C.O.: explorar, co-diseñar, operacionalizar.", "<b>Conversación que sostengo:</b> la del alivio concreto: qué sacamos, qué se posterga, qué se queda.", "<b>Métrica que reviso:</b> acuerdos con fecha de revisión que efectivamente se revisaron.", "<b>Fecha de seguimiento:</b> la que quedó escrita en el acuerdo; sin fecha no hay acuerdo.", "<b>Responsable:</b> quien sostuvo la conversación."]}, {"t": "tier", "color": "#2f6f8f", "title": "R — Revisar métricas humanas y operativas", "when": "Lo que no se mira, se repite. Licencias, rotación y silencio también son resultados.", "items": ["<b>Señal que observo:</b> el tablero solo tiene números de negocio y ninguno de personas.", "<b>Decisión que tomo:</b> sumar al tablero quincenal las señales humanas junto a las operativas.", "<b>Conversación que sostengo:</b> con mi propio jefe o directorio: estos números también son resultados.", "<b>Métrica que reviso:</b> que el tablero exista, se mire y gatille decisiones.", "<b>Fecha de seguimiento:</b> cada quince días, el mismo día del tablero.", "<b>Responsable:</b> quien presenta el tablero."]}, {"t": "tier", "color": "#7a6cae", "title": "A — Ajustar mediante pilotos", "when": "Nada de reformas épicas: prueba chico, mide, corrige y recién entonces escala.", "items": ["<b>Señal que observo:</b> ganas de lanzar una reforma gigante \"de una vez por todas\".", "<b>Decisión que tomo:</b> elegir un equipo, un cambio y 30 días. Probar chico antes de escalar.", "<b>Conversación que sostengo:</b> con el equipo piloto: qué probamos y cómo sabremos si funcionó.", "<b>Métrica que reviso:</b> el antes y el después del piloto, en un indicador humano y uno de negocio.", "<b>Fecha de seguimiento:</b> día 30 del piloto, sin excepción.", "<b>Responsable:</b> quien pidió el cambio, no quien lo sufre."]}, {"t": "note", "text": "Si puedes explicar el método en una frase —mirar de verdad, rediseñar lo que desgasta y sostenerlo con decisiones medibles—, ya lo tienes. Lo demás es práctica."}];
+var mxDone=false;
+function mxRender(){
+  lastReport={model:MX,title:'Matriz R.E.S.P.I.R.A. de aplicación',file:'matriz-respira'};
+  if(mxDone) return;
+  var box=document.getElementById('mx-res');
+  box.innerHTML='<div class="report">'+rHTML(MX)+reportActions()+'</div>';
+  box.classList.add('show'); mxDone=true;
 }
 </script>
 </body>

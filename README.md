@@ -1,2 +1,2 @@
 # KIT-Trabajar no debería destruirte
-KIT: Seis herramientas para llevar el libro a la práctica. Los cuatro tests se califican solos y te dan un resultado descargable; las plantillas se copian con un toque y el checklist se marca a medida que avanzas.
+KIT: Siete herramientas para llevar el libro a la práctica. La matriz R.E.S.P.I.R.A. resume el método en una página; las cuatro autoevaluaciones se califican solas y entregan un informe descargable; las plantillas se copian con un toque y el checklist se marca a medida que avanzas.

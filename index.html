@@ -3,8 +3,8 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Herramientas · Trabajar no debería destruirte</title>
-<meta name="description" content="Herramientas digitales del libro Trabajar no debería destruirte, de Yael Sescovich: matriz R.E.S.P.I.R.A., autoevaluaciones de pre-burnout, Eneagrama, entorno laboral e impacto en el clima, plantillas y checklist del líder. Cada informe incluye un plan de acción.">
+<title>Caja de Herramientas · Trabajar no debería destruirte</title>
+<meta name="description" content="Herramientas digitales del libro Trabajar no debería destruirte, de Yael Sescovich: matriz R.E.S.P.I.R.A., autoevaluación orientativa de señales de desgaste, cuestionario de reflexión del eneagrama, autodiagnóstico del entorno laboral, autoevaluación de impacto en el clima, plantillas y checklist del líder. Gratis y sin registro.">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&display=swap" rel="stylesheet">
@@ -200,29 +200,31 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- HOME -->
   <section id="home" class="view active">
     <div class="hero">
-      <p class="kicker">Caja de herramientas</p>
+      <p class="kicker">Caja de Herramientas</p>
       <h1>Trabajar no debería destruirte</h1>
       <p class="sub">Del libro a la práctica</p>
       <p class="by">Por Yael Sescovich</p>
-      <p class="lead">Siete herramientas para llevar el libro a la acción. La matriz R.E.S.P.I.R.A. resume el método completo en una página; las cuatro autoevaluaciones se califican solas y te entregan un informe con plan de acción; las plantillas se copian con un toque y el checklist se marca a medida que avanzas.</p>
-      <p style="font-family:var(--sans);font-size:13px;color:var(--soft);background:var(--navy-soft);border-radius:10px;padding:11px 16px;max-width:520px;margin:18px auto 0;line-height:1.5">🔒 <b style="color:var(--navy)">Todo es privado.</b> Las herramientas funcionan en tu dispositivo. Tus respuestas no se guardan ni se envían a ninguna parte, y cada informe lo descargas solo tú al presionar el botón.</p>
+      <p class="lead">Siete herramientas para llevar el libro a la acción. La matriz R.E.S.P.I.R.A. resume el método completo en una página; las tres autoevaluaciones te entregan un informe con plan de acción, y el cuestionario de reflexión del eneagrama, una lectura para mirarte sin etiquetarte; las plantillas se copian con un toque y el checklist se marca a medida que avanzas.</p>
+      <p style="font-family:var(--sans);font-size:13px;color:var(--soft);background:var(--navy-soft);border-radius:10px;padding:11px 16px;max-width:520px;margin:18px auto 0;line-height:1.5">🔒 <b style="color:var(--navy)">Todo es privado, gratis y sin registro.</b> Las herramientas funcionan en tu dispositivo. Tus respuestas no se guardan ni se envían a ninguna parte, y cada informe lo descargas solo tú al presionar el botón.</p>
       <hr class="rule">
     </div>
     <div class="cards" id="home-cards"></div>
     <div class="foot">
       <p class="eyebrow">¿Conversamos?</p>
-      <a class="mailto" href="mailto:yaelsescovich@fourtms.com?subject=Quiero%20agendar%20una%20reuni%C3%B3n">Escríbeme para agendar una reunión</a>
-      <p class="foot-note">Estas herramientas acompañan al libro <i>Trabajar no debería destruirte</i> y son una guía de autoconocimiento y gestión, no un diagnóstico clínico ni una asesoría legal. Si te identificas con un nivel de desgaste alto, conversarlo con un profesional de salud es un buen paso.</p>
+      <a class="mailto" href="https://fourtms.com/agenda" target="_blank" rel="noopener">Agenda una reunión conmigo</a>
+      <p class="foot-note">O escríbeme a <a href="mailto:libro@fourtms.com">libro@fourtms.com</a></p>
+      <p class="foot-note">Estas herramientas acompañan al libro <i>Trabajar no debería destruirte</i> y son herramientas de autoobservación y gestión, no un diagnóstico ni una asesoría legal: no clasifican personas, no predicen desempeño y no reemplazan una evaluación profesional de salud. Si las señales de desgaste persisten, empeoran o afectan tu funcionamiento, consulta a un profesional de la salud.</p>
+      <p class="foot-note">Si estás atravesando una crisis, busca ayuda profesional. En Chile, la Línea de Prevención del Suicidio *4141 del Ministerio de Salud atiende gratis, todos los días, las 24 horas.</p>
       <p class="foot-brand">4T Management Solutions</p>
     </div>
   </section>
 
-  <!-- 01 PRE-BURNOUT -->
+  <!-- 01 SEÑALES DE DESGASTE -->
   <section id="t-bo" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
     <p class="eyebrow2">Herramienta 02</p>
-    <h2>Autoevaluación orientativa de pre-burnout</h2>
-    <p class="intro">15 preguntas sobre cómo has estado el último mes, en 4 dimensiones. Mide tu nivel de desgaste hoy y te muestra en qué área está concentrado, con un plan para empezar a cuidarte.</p>
+    <h2>Autoevaluación orientativa de señales de desgaste</h2>
+    <p class="intro">15 preguntas sobre cómo has estado el último mes, en 4 áreas del trabajo. Te muestra qué señales de desgaste aparecen y en qué área se concentran, con ideas para actuar sobre lo que las provoca. Orienta, no diagnostica.</p>
     <p class="legend" id="bo-legend"></p>
     <div id="bo-form"></div>
     <button class="btn" onclick="resBO()">Ver mi informe</button>
@@ -234,9 +236,9 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <section id="t-en" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
     <p class="eyebrow2">Herramienta 03</p>
-    <h2>Cuestionario de reflexión del Eneagrama</h2>
+    <h2>Cuestionario de reflexión del eneagrama</h2>
     <p class="intro">27 frases para reconocer el tipo en el que más te ves. No es una caja que te encierra: es un mapa voluntario para entender qué te mueve y qué cuidar cuando aprieta el estrés. Responde por instinto.</p>
-    <p class="legend"><b>Antes de partir:</b> esta herramienta es una invitación no diagnóstica a la autoobservación. No clasifica personas, no predice desempeño y no debe usarse para contratar, evaluar, asignar tareas ni reemplazar una evaluación psicológica. La evidencia científica sobre el modelo es mixta: úsalo como lente de reflexión.</p>
+    <p class="legend"><b>Antes de partir:</b> esta herramienta es una invitación no diagnóstica a la autoobservación. No clasifica personas, no predice desempeño y no debe usarse para contratar, evaluar, asignar tareas ni reemplazar una evaluación psicológica. La evidencia científica sobre el eneagrama es mixta: úsalo como lente de reflexión. Respóndelo solo sobre ti: a las demás personas no las tipifiques tú, cada quien se lee solo. Y si lo que reconoces son malestares que no ceden y se te instalan por semanas, eso ya no se explica por un tipo: consulta a un profesional de salud.</p>
     <p class="legend" id="en-legend"></p>
     <div id="en-form"></div>
     <button class="btn" onclick="resEN()">Ver mi informe</button>
@@ -249,7 +251,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
     <button class="back" onclick="go('home')">← Volver</button>
     <p class="eyebrow2">Herramienta 04</p>
     <h2>Autodiagnóstico de tu entorno laboral</h2>
-    <p class="intro">14 preguntas sobre tu trabajo o tu equipo hoy. Mide si tu entorno nutre o desgasta, y te dice qué dimensiones conviene intervenir primero.</p>
+    <p class="intro">16 preguntas sobre tu trabajo o tu equipo hoy. Mide si tu entorno nutre o desgasta, y te dice qué dimensiones conviene intervenir primero.</p>
     <p class="legend" id="ev-legend"></p>
     <div id="ev-form"></div>
     <button class="btn" onclick="resEV()">Ver mi informe</button>
@@ -260,7 +262,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
   <!-- 04 IMPACTO -->
   <section id="t-im" class="view">
     <button class="back" onclick="go('home')">← Volver</button>
-    <p class="eyebrow2">Herramienta 05 · Para líderes</p>
+    <p class="eyebrow2">Herramienta 05 · Para quienes lideran</p>
     <h2>Autoevaluación de impacto en el clima</h2>
     <p class="intro">16 preguntas sobre cómo lideras y cómo impacta tu estilo en el clima de tu equipo. Responde con honestidad; el resultado solo lo ves tú, y viene con un plan a corto, mediano y largo plazo.</p>
     <p class="legend" id="im-legend"></p>
@@ -275,7 +277,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
     <button class="back" onclick="go('home')">← Volver</button>
     <p class="eyebrow2">Herramienta 06</p>
     <h2>Plantillas listas para usar</h2>
-    <p class="intro">Siete formatos para activar las prácticas más importantes del método. Toca cada una para abrirla, edita lo que está [entre corchetes], copia y envía.</p>
+    <p class="intro">Siete formatos para activar las prácticas más importantes del método. Toca cada una para abrirla, cópiala con el botón y, antes de enviarla, completa lo que está [entre corchetes].</p>
     <div id="tpl-list"></div>
   </section>
 
@@ -294,7 +296,7 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
     <button class="back" onclick="go('home')">← Volver</button>
     <p class="eyebrow2">Herramienta 01 · El método</p>
     <h2>Matriz R.E.S.P.I.R.A. de aplicación</h2>
-    <p class="intro">El método completo del libro, en una página accionable: Reconocer, Examinar, Simplificar, Proteger, Intervenir, Revisar y Ajustar. Léela letra por letra, escribe tus propias respuestas y descárgala en PDF para tenerla a mano.</p>
+    <p class="intro">El método completo del libro, en una página accionable: Reconocer, Examinar, Simplificar, Proteger, Intervenir, Revisar y Ajustar. Léela letra por letra y descárgala en PDF para tenerla a mano. Lo que trae cada letra te sirve de guía: tus propias respuestas las escribes aparte, en papel o en un documento tuyo.</p>
     <div class="result" id="mx-res"></div>
   </section>
 
@@ -305,21 +307,24 @@ body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);
 <script src="https://cdn.jsdelivr.net/npm/pdf-lib@1.17.1/dist/pdf-lib.min.js"></script>
 <script>
 /* ===================== NAVEGACIÓN ===================== */
-function go(id){
+function go(id,fromHistory){
   document.querySelectorAll('.view').forEach(v=>v.classList.remove('active','printing'));
   var el=document.getElementById(id); el.classList.add('active');
   if(id==='t-mx'){mxRender();}
+  if(!fromHistory){ try{ if(id==='home'){ if(history.state&&history.state.v){history.back();} } else if(history.state&&history.state.v){ history.replaceState({v:id},''); } else { history.pushState({v:id},''); } }catch(e){} }
   window.scrollTo(0,0);
 }
+window.addEventListener('popstate',function(e){ go((e.state&&e.state.v)||'home',true); });
+try{ if(history.state&&history.state.v){ history.replaceState(null,''); } }catch(e){}
 
 /* ===================== HOME CARDS ===================== */
 var HOME=[
   ['t-mx','Herramienta 01 · El método','Matriz R.E.S.P.I.R.A.','El método completo del libro en una página: señal, decisión, conversación, métrica, fecha y responsable.','#2f6f8f'],
-  ['t-bo','Herramienta 02','Autoevaluación de pre-burnout','Mide tu nivel de desgaste hoy en 4 dimensiones y te muestra dónde está concentrado. Orienta, no diagnostica.','var(--terra)'],
-  ['t-en','Herramienta 03','Cuestionario de reflexión del Eneagrama','Una lente voluntaria de autoobservación: qué te mueve y qué cuidar bajo estrés. No clasifica ni evalúa a nadie.','var(--mustard)'],
-  ['t-ev','Herramienta 04','Autodiagnóstico de tu entorno','¿Tu trabajo nutre o desgasta? Y qué dimensiones conviene intervenir primero.','var(--green)'],
-  ['t-im','Herramienta 05 · Líderes','Autoevaluación de impacto en el clima','Cómo tu estilo impacta a tu equipo, con un plan a corto, mediano y largo plazo.','var(--navy)'],
-  ['t-tpl','Herramienta 06','Plantillas listas para usar','Siete formatos para activar las prácticas del método. Edita, copia y envía.','#7a6cae'],
+  ['t-bo','Herramienta 02','Autoevaluación orientativa de señales de desgaste','Qué señales de desgaste aparecen hoy y en qué áreas del trabajo se concentran. Orienta, no diagnostica.','var(--terra)'],
+  ['t-en','Herramienta 03','Cuestionario de reflexión del eneagrama','Una invitación voluntaria a la autoobservación: qué te mueve y qué cuidar bajo estrés. No diagnostica ni clasifica a nadie.','var(--mustard)'],
+  ['t-ev','Herramienta 04','Autodiagnóstico de tu entorno laboral','¿Tu trabajo nutre o desgasta? Y qué dimensiones conviene intervenir primero.','var(--green)'],
+  ['t-im','Herramienta 05 · Para quienes lideran','Autoevaluación de impacto en el clima','Cómo tu estilo impacta a tu equipo, con un plan a corto, mediano y largo plazo.','var(--navy)'],
+  ['t-tpl','Herramienta 06','Plantillas listas para usar','Siete formatos para activar las prácticas del método. Copia, completa y envía.','#7a6cae'],
   ['t-chk','Herramienta 07','Checklist del líder','Veinte decisiones concretas para proteger a tu equipo del desgaste.','#3f8e8a']
 ];
 (function(){
@@ -343,7 +348,7 @@ function bandPos(p){ // tests positivos (más alto = mejor)
 function bandNeg(p){ // tests negativos (más alto = peor)
   if(p<=30) return {c:'#6FA52C',bg:'#EEF4E4',t:'Sano'};
   if(p<=55) return {c:'#D8A828',bg:'#FBF1D4',t:'Atención'};
-  if(p<=75) return {c:'#E07B39',bg:'#FBEAD9',t:'Pre-burnout'};
+  if(p<=75) return {c:'#E07B39',bg:'#FBEAD9',t:'Desgaste'};
   return {c:'#C0492F',bg:'#F7E6E1',t:'Alerta'};
 }
 function buildForm(boxId, items, opts, prefix){
@@ -370,7 +375,7 @@ function checkComplete(p,n,warnId){
   var miss=[];
   for(var i=0;i<n;i++){ if(ANS[p][i]===undefined){ miss.push(i); } }
   if(miss.length){
-    document.getElementById(warnId).textContent='Te faltan '+miss.length+' '+(miss.length===1?'pregunta':'preguntas')+'. Las marqué más abajo.';
+    document.getElementById(warnId).textContent='Te faltan '+miss.length+' '+(miss.length===1?'pregunta':'preguntas')+'. Las marqué más arriba.';
     miss.forEach(function(i){ document.getElementById(p+'-q'+i).classList.add('flag'); });
     document.getElementById(p+'-q'+miss[0]).scrollIntoView({behavior:'smooth',block:'center'});
     return false;
@@ -430,26 +435,30 @@ function reportActions(){
   return '<div class="r-actions no-print">'+
     '<button class="btn secondary" id="dlbtn" onclick="downloadPDF()">Descargar informe en PDF</button>'+
     '<button class="btn" onclick="go(\'home\')">Volver al inicio</button></div>'+
-    '<p class="disc"><b>Privado:</b> este informe se genera y se descarga solo en tu dispositivo cuando tú presionas el botón. No se guarda ni se envía a 4T Management Solutions ni a ninguna plataforma. Es una guia de autoconocimiento, no un diagnostico clinico, y acompana al libro <i>Trabajar no deberia destruirte</i>.</p>';
+    '<p class="disc"><b>Privado:</b> este informe se genera y se descarga solo en tu dispositivo cuando tú presionas el botón. No se guarda ni se envía a 4T Management Solutions ni a ninguna plataforma. Es una herramienta de autoobservación, no un diagnóstico ni una evaluación profesional de salud, y acompaña al libro <i>Trabajar no debería destruirte</i>.</p>';
 }
 function showReport(boxId, model, title, file){
   lastReport={model:model,title:title,file:file};
   var box=document.getElementById(boxId);
+  box._rep=lastReport;
   box.innerHTML='<div class="report">'+rHTML(model)+reportActions()+'</div>';
   box.classList.add('show');
   box.scrollIntoView({behavior:'smooth',block:'start'});
 }
 /* ---- PDF real con pdf-lib (sin internet, sin dialogo de impresion) ---- */
 async function downloadPDF(){
-  var btn=document.getElementById('dlbtn');
+  var view=document.querySelector('.view.active');
+  var res=view&&view.querySelector('.result');
+  var rep=(res&&res._rep)||lastReport;
+  var btn=view&&view.querySelector('.r-actions .btn.secondary');
   if(btn){btn.disabled=true;btn.textContent='Generando PDF...';}
   try{
-    if(typeof PDFLib==='undefined'){throw new Error('La libreria PDF no cargo');}
-    var bytes=await rPDF(lastReport.model,{title:lastReport.title});
+    if(typeof PDFLib==='undefined'){throw new Error('La librería PDF no cargó');}
+    var bytes=await rPDF(rep.model,{title:rep.title});
     var blob=new Blob([bytes],{type:'application/pdf'});
     var url=URL.createObjectURL(blob);
     var a=document.createElement('a');
-    a.href=url; a.download=(lastReport.file||'informe')+'.pdf';
+    a.href=url; a.download=(rep.file||'informe')+'.pdf';
     document.body.appendChild(a); a.click();
     setTimeout(function(){a.remove();URL.revokeObjectURL(url);},1500);
   }catch(e){ alert('No se pudo generar el PDF: '+e.message); console.error(e); }
@@ -535,29 +544,31 @@ async function rPDF(model, meta){
       y-=bh+4;
     }
   });
+  gap(14);
+  txt('Acompaña al libro Trabajar no debería destruirte. Es una herramienta de autoobservación y gestión: no es un diagnóstico, no clasifica personas ni reemplaza una evaluación profesional de salud.',M,8,FI,SOFT,W,{center:true,lh:11});
   return await doc.save();
 }
 
 
-/* ===================== 01 · PRE-BURNOUT ===================== */
+/* ===================== 01 · SEÑALES DE DESGASTE ===================== */
 var BO_OPTS=[{l:'Nunca',v:0},{l:'Rara vez',v:1},{l:'A veces',v:2},{l:'Seguido',v:3},{l:'Siempre',v:4}];
 var BO_DIMS={
- carga:{name:'Carga y energía', ref:'Capítulo 8, «Implementación del antídoto»: el job crafting y el método de las primeras 48 horas.',
+ carga:{name:'Carga y energía', ref:'Capítulo 8, “Implementación del antídoto”: el job crafting y el método de las primeras 48 horas.',
    work:['Haz visible tu carga: lista todo lo que tienes hoy y llévalo a tu jefatura para repriorizar. No todo puede ser prioridad uno.',
      'Define una hora fija para cerrar el día y cúmplela. La desconexión no es premio, es mantenimiento.',
      'Protege un bloque diario de foco sin interrupciones; el resto, agéndalo.',
      'Recupera energía con pausas reales y sueño, no con más café.']},
- control:{name:'Autonomía y control', ref:'Capítulo 5, «Liderazgo humano y consciente»: cómo se lidera dando contexto y autonomía, no microgestión.',
+ control:{name:'Autonomía y control', ref:'Capítulo 5, “Liderazgo humano y consciente”: cómo se lidera dando contexto y autonomía, no microgestión.',
    work:['Acuerda con tu jefatura qué decisiones puedes tomar sin pedir permiso.',
-     'Pide criterios, no instrucciones: cuando entiendes el "para qué", el "cómo" lo decides tú.',
+     'Pide criterios, no instrucciones: cuando entiendes el “para qué”, el “cómo” lo decides tú.',
      'Cuando cambien las prioridades, que el cambio tenga un costo explícito: si entra algo, sale algo.',
      'Agrupa las interrupciones en ventanas en lugar de atenderlas al instante.']},
- sentido:{name:'Reconocimiento y propósito', ref:'Capítulo 4, «La arquitectura del buen trato»: los cuatro pilares del reconocimiento y el sentido.',
-   work:['Pide feedback concreto: qué hiciste bien y qué cambiarías, no solo "vas bien".',
+ sentido:{name:'Reconocimiento y propósito', ref:'Capítulo 4, “La arquitectura del buen trato”: reconocer de forma específica, no genérica, uno de sus cuatro pilares.',
+   work:['Pide feedback concreto: qué hiciste bien y qué cambiarías, no solo “vas bien”.',
      'Reconecta tu trabajo con su impacto: ¿a quién le sirve realmente lo que haces?',
      'Conversa con tu jefatura sobre crecimiento y sentido, no solo sobre tareas.',
      'Reconoce tú también a los demás: el reconocimiento que das tiende a volver.']},
- vinculos:{name:'Vínculos y apoyo', ref:'Capítulo 5, «Liderazgo humano y consciente»: el protocolo E.C.O. y la seguridad psicológica.',
+ vinculos:{name:'Vínculos y apoyo', ref:'Capítulo 5, “Liderazgo humano y consciente”: el protocolo E.C.O. y la seguridad psicológica.',
    work:['Rompe el aislamiento: define una persona con quien chequear cómo estás cada semana.',
      'Pide ayuda temprano. Pedir no es debilidad, es gestión.',
      'Dile a tu jefatura cómo estás de verdad; nadie puede cuidar lo que no ve.',
@@ -580,15 +591,15 @@ var BO_Q=[
  {t:'Evito pedir ayuda por miedo a que me juzguen.',d:'vinculos'},
  {t:'Mi jefatura no se da cuenta de cómo estoy realmente.',d:'vinculos'}
 ];
-var BO_BANDTXT={Sano:'Energía sana',Atención:'Señales tempranas',['Pre-burnout']:'Pre-burnout instalado',Alerta:'Desgaste alto'};
+var BO_BANDTXT={Sano:'Energía sana',Atención:'Señales tempranas',Desgaste:'Señales frecuentes de desgaste',Alerta:'Desgaste alto'};
 var BO_SUM={
  Sano:'Hoy estás en una zona sostenible. El objetivo es cuidarla antes de que se erosione.',
  Atención:'Aparecen las primeras señales. Es el mejor momento para corregir, cuando todavía es barato.',
- ['Pre-burnout']:'Estás en zona de pre-burnout: el desgaste ya se instaló. Conviene intervenir ahora, no en tres meses.',
- Alerta:'Tu nivel de desgaste es alto. Vale la pena tomarlo en serio y, si puedes, conversarlo con un profesional de salud.'
+ Desgaste:'Las señales de desgaste ya son frecuentes. Conviene actuar ahora sobre lo que las provoca en el trabajo, no en tres meses. Si persisten o afectan tu funcionamiento, conversarlo con un profesional de la salud es un buen paso.',
+ Alerta:'Marcaste muchas señales de desgaste, y seguido. Tómalo en serio: conversarlo con un profesional de la salud es un buen primer paso y, en paralelo, conviene revisar qué del trabajo las está provocando.'
 };
 buildForm('bo-form',BO_Q,BO_OPTS,'bo');
-document.getElementById('bo-legend').innerHTML='<b>Cómo responder:</b> pensando en <b>cómo te has sentido el último mes</b>, marca cuánto te pasa cada frase: <i>Nunca</i>, <i>Rara vez</i>, <i>A veces</i>, <i>Seguido</i> o <i>Siempre</i>. Responde por ti; el informe es privado.';
+document.getElementById('bo-legend').innerHTML='<b>Cómo responder:</b> pensando en <b>cómo te has sentido el último mes</b>, marca cuánto te pasa cada frase: <i>Nunca</i>, <i>Rara vez</i>, <i>A veces</i>, <i>Seguido</i> o <i>Siempre</i>. Responde por ti; el informe es privado. <b>Antes de partir:</b> esta autoevaluación es orientativa y no diagnostica burnout ni ninguna condición de salud. Si las señales persisten, empeoran o afectan tu funcionamiento, consulta a un profesional de la salud.';
 function resBO(){
   if(!checkComplete('bo',BO_Q.length,'bo-warn'))return;
   var dimsum={carga:0,control:0,sentido:0,vinculos:0}, dimmax={carga:0,control:0,sentido:0,vinculos:0};
@@ -597,26 +608,26 @@ function resBO(){
   var P=pct(total,max), band=bandNeg(P);
   var order=Object.keys(BO_DIMS).sort(function(a,b){return pct(dimsum[b],dimmax[b])-pct(dimsum[a],dimmax[a]);});
   var m=[];
-  m.push({t:'head',kicker:'Tu nivel de desgaste hoy',band:BO_BANDTXT[band.t],color:band.c,summary:BO_SUM[band.t],pct:P,leftLabel:'Sano',rightLabel:'Alerta'});
+  m.push({t:'head',kicker:'Tus señales de desgaste hoy',band:BO_BANDTXT[band.t],color:band.c,summary:BO_SUM[band.t],pct:P,leftLabel:'Sano',rightLabel:'Alerta'});
   m.push({t:'bullets',title:'Cómo funciona el desgaste',items:[
-    'El burnout no llega de golpe, es una progresión: energía sana, señales tempranas, pre-burnout instalado y desgaste alto. Tu banda de arriba marca en qué punto de esa curva estás hoy.',
-    'Lo que se erosiona son cuatro recursos —carga, control, sentido y vínculos— y no actúan solos: cuando uno cae, sobrecarga a los demás. Con poco control, la misma carga pesa más; sin vínculos, no hay amortiguador. Por eso importa dónde está concentrado, no solo el total.',
-    'La trampa es el presentismo: seguir presente pero rindiendo por debajo, arrastrando al equipo (efecto dominó). Se ve como compromiso y es desgaste. Las micro-alarmas son baratas de corregir; instaladas, cuestan mucho más (Capítulo 1).'
+    'El desgaste no llega de golpe: avisa con señales pequeñas que solemos normalizar, y conviene mirarlas antes de que se instale (Capítulo 1). La banda de arriba resume las señales que marcaste; no es un diagnóstico ni dice si tienes burnout. Si persisten, empeoran o afectan tu funcionamiento, consulta a un profesional de la salud.',
+    'Las preguntas miran cuatro de las seis áreas del trabajo que Christina Maslach asocia al burnout: carga, control, reconocimiento y comunidad. Por eso importa en qué área se concentran tus señales, no solo el total. Son áreas del trabajo, y casi todas dependen de decisiones de la organización: lo más probable es que no estés fallando tú.',
+    'La trampa es el presentismo: seguir presente, pero con la atención y la energía mermadas. Se ve como compromiso y es desgaste. Las microalarmas son baratas de corregir; instaladas, cuestan mucho más (Capítulo 1).'
   ]});
   m.push({t:'label',text:'Dónde está concentrado · ordenado de mayor a menor'});
   order.forEach(function(k){
     var dp=pct(dimsum[k],dimmax[k]), db=bandNeg(dp), D=BO_DIMS[k];
     var dim={t:'dim',name:D.name,pct:dp,color:db.c,bg:db.bg,tagText:dp+'% · '+db.t};
-    if(dp>40){ dim.bodyTitle='Qué trabajar'; dim.body=D.work.slice(); dim.ref=D.ref; }
+    if(dp>30||k===order[0]){ dim.bodyTitle='Qué trabajar'; dim.body=D.work.slice(); dim.ref=D.ref; }
     else { dim.bodyTitle='Vas bien aquí'; dim.body=['Esta dimensión está sana. Mantenla: es parte de lo que te sostiene cuando otras aprietan.']; }
     m.push(dim);
   });
   m.push({t:'tier',color:'#22255A',titleColor:'#22255A',title:'Por dónde empezar',when:'Tu prioridad esta semana',
     items:['Tu dimensión más cargada es <b>'+BO_DIMS[order[0]].name+'</b>. Elige <b>una sola</b> acción de su lista y hazla esta semana. Una bien hecha vale más que cuatro a medias.']});
-  var POSL={'Sano':'Tu energía hoy es sostenible. Sostenerla es diseño, no suerte: mantener carga, autonomía, reconocimiento y vínculos en el tiempo.','Atención':'Estás a tiempo de corregir barato. La ventana para actuar sobre carga, autonomía, reconocimiento y vínculos es ahora, antes de que el desgaste se instale.','Pre-burnout':'El pre-burnout instalado se revierte, pero interviniendo el diseño del trabajo —carga, autonomía, reconocimiento y vínculos—, no la fuerza de voluntad.','Alerta':'Un desgaste alto no se corrige pidiéndote aguantar más ni con una charla de resiliencia: se corrige interviniendo carga, autonomía, reconocimiento y vínculos, en ti y en el sistema que te rodea.'};
-  m.push({t:'lead',title:'Esto se puede revertir',sub:POSL[band.t]||''});
-  m.push({t:'note',text:'Este es exactamente el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene y se revierte el burnout, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a yaelsescovich@fourtms.com'});
-  showReport('bo-res',m,'Informe · Pre-burnout','Informe-pre-burnout');
+  var POSL={'Sano':'Tu energía hoy es sostenible. Sostenerla es diseño, no suerte: mantener carga, autonomía, reconocimiento y vínculos en el tiempo.','Atención':'Estás a tiempo de corregir barato. La ventana para actuar sobre carga, autonomía, reconocimiento y vínculos es ahora, antes de que el desgaste se instale.','Desgaste':'Cuando las señales ya son frecuentes, lo que ayuda es intervenir el diseño del trabajo —carga, autonomía, reconocimiento y vínculos—, no la fuerza de voluntad.','Alerta':'Un desgaste alto no se corrige pidiéndote aguantar más ni con una charla de resiliencia. Pide que se revisen la carga, la autonomía, el reconocimiento y el apoyo en tu trabajo.'};
+  m.push({t:'lead',title:'Lo que se puede cambiar',sub:POSL[band.t]||''});
+  m.push({t:'note',text:'Este informe está completo por sí solo. Acompañar estos procesos es el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene el desgaste y se rediseña el trabajo que lo provoca, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a <a href="mailto:libro@fourtms.com">libro@fourtms.com</a> o agenda una reunión en <a href="https://fourtms.com/agenda" target="_blank" rel="noopener">fourtms.com/agenda</a>.'});
+  showReport('bo-res',m,'Informe · Señales de desgaste','Informe-senales-de-desgaste');
 }
 </script>
 <script>
@@ -652,55 +663,55 @@ var EN_Q=[
  {t:'Postergo decisiones para no generar tensión.',ty:9}
 ];
 var EN_T={
- 1:{n:'Tipo 1 · Perfeccionista',e:'Buscas hacer las cosas bien y mejorar lo que está mal.',
+ 1:{n:'Tipo 1 · El perfeccionista',e:'Buscas hacer las cosas bien y mejorar lo que está mal.',
     fz:'Estándares altos, rigor y un fuerte sentido de la responsabilidad. Donde estás tú, las cosas se hacen bien.',
-    rg:'La autoexigencia se vuelve crítica permanente. Te cuesta delegar y soltar, y el "nunca es suficiente" te agota a ti y al equipo.',
-    s:4, sTxt:'te vuelves melancólico y autocrítico, rumiando lo que falta. Es tu señal de alarma.',
+    rg:'La autoexigencia se vuelve crítica permanente. Te cuesta delegar y soltar, y el “nunca es suficiente” te agota a ti y al equipo.',
+    s:4, sTxt:'te vuelves amargo y autocrítico, dándole vueltas a lo que falta. Es tu señal de alarma.',
     g:7, gTxt:'date permiso para lo imperfecto y para disfrutar; no todo tiene que estar resuelto para descansar.',
-    w:['Distingue lo que debe quedar excelente de lo que solo debe estar listo.','Delega y acepta el 85%: lo perfecto suele ser enemigo de lo entregado.','Cuando aparezca la crítica interna, pregúntate si le hablarías así a alguien que quieres.']},
- 2:{n:'Tipo 2 · Ayudador',e:'Te conectas con las personas y te mueve ser útil para otros.',
+    w:['Cambia el “tengo que” por “elijo”.','Distingue lo que debe quedar excelente de lo que solo debe estar listo.','Delega y acepta el 85%: lo perfecto suele ser enemigo de lo entregado.','Cuando aparezca la crítica interna, pregúntate si le hablarías así a alguien que quieres.']},
+ 2:{n:'Tipo 2 · El que ayuda',e:'Te conectas con las personas y te mueve ser útil para otros.',
     fz:'Empatía, lectura fina de las personas y capacidad de generar vínculos y equipo.',
     rg:'Te cuesta poner límites y pedir para ti. Terminas sobrecargado de lo ajeno y resentido cuando no te lo reconocen.',
     s:8, sTxt:'te vuelves exigente y controlador, reclamando lo que diste. Es tu señal de alarma.',
     g:4, gTxt:'date el mismo cuidado que das; reconocer tus propias necesidades no es egoísmo.',
     w:['Practica decir que no sin justificarte de más.','Pide ayuda y reconocimiento de forma explícita, en vez de esperar que lo adivinen.','Antes de ofrecerte, chequea si tienes la energía para sostenerlo.']},
- 3:{n:'Tipo 3 · Triunfador',e:'Te mueve el logro, la eficiencia y alcanzar metas.',
+ 3:{n:'Tipo 3 · El que logra',e:'Te mueve el logro, la eficiencia y alcanzar metas.',
     fz:'Foco, energía para ejecutar y capacidad de movilizar resultados.',
     rg:'Tu valor se pega a tus logros. Te cuesta parar, descansar te incomoda, y puedes priorizar la imagen por sobre lo que de verdad sientes.',
     s:9, sTxt:'te apagas y postergas, desconectado de lo que quieres. Es tu señal de alarma.',
     g:6, gTxt:'cultiva vínculos y compromisos que no dependan de tu rendimiento; tu valor no es tu marcador.',
     w:['Agenda descanso como agendas una reunión importante, y respétalo.','Separa quién eres de lo que logras: pregúntate qué quieres tú, no qué se espera.','Comparte un avance real, no solo la versión pulida.']},
- 4:{n:'Tipo 4 · Individualista',e:'Buscas autenticidad, profundidad y sentido en lo que haces.',
+ 4:{n:'Tipo 4 · El que busca sentido',e:'Buscas autenticidad, profundidad y sentido en lo que haces.',
     fz:'Creatividad, sensibilidad y capacidad de aportar una mirada única.',
     rg:'Las emociones intensas te arrastran y la comparación te hace sentir distinto o insuficiente. Puedes quedarte en lo que falta.',
     s:2, sTxt:'te vuelcas en exceso a los demás para sentirte necesitado, descuidándote. Es tu señal de alarma.',
     g:1, gTxt:'aterriza en la acción y en estructuras concretas; hacer, aunque no estés inspirado, también te ordena.',
-    w:['Crea rutinas simples que sostengan tu trabajo cuando la emoción no acompaña.','Cuando llegue la comparación, vuelve a lo que sí tienes y sí avanzaste.','Pon límite a la rumiación: nómbrala, escríbela y vuelve a la tarea.']},
- 5:{n:'Tipo 5 · Investigador',e:'Te mueve entender, analizar y dominar tu campo.',
+    w:['Separa la emoción de la tarea: un comentario sobre tu trabajo no es un juicio sobre tu valor.','Crea rutinas simples que sostengan tu trabajo cuando la emoción no acompaña.','Cuando llegue la comparación, vuelve a lo que sí tienes y sí avanzaste.','Ponle límite a darle vueltas a lo mismo: nómbralo, escríbelo y vuelve a la tarea.']},
+ 5:{n:'Tipo 5 · El que observa',e:'Te mueve entender, analizar y dominar tu campo.',
     fz:'Profundidad, criterio analítico y autonomía. Aportas claridad donde otros se pierden.',
     rg:'Te aíslas y acumulas información antes de actuar. Proteges tanto tu energía que te desconectas del equipo y de tus emociones.',
     s:7, sTxt:'te dispersas y saltas de estímulo en estímulo para evadir. Es tu señal de alarma.',
     g:8, gTxt:'pasa a la acción y ocupa tu espacio; no necesitas saberlo todo para decidir y liderar.',
-    w:['Pon un límite al análisis: decide con la información suficiente, no con toda.','Comparte avances en proceso, no solo cuando esté "completo".','Agenda contacto con tu equipo aunque no sientas la necesidad; el vínculo también es trabajo.']},
- 6:{n:'Tipo 6 · Leal',e:'Buscas seguridad, confianza y estar preparado para lo que venga.',
+    w:['Pide y protege bloques de trabajo sin interrupción.','Pon un límite al análisis: decide con la información suficiente, no con toda.','Comparte avances en proceso, no solo cuando esté “completo”.','Agenda contacto con tu equipo aunque no sientas la necesidad; el vínculo también es trabajo.']},
+ 6:{n:'Tipo 6 · El leal',e:'Buscas seguridad, confianza y estar preparado para lo que venga.',
     fz:'Lealtad, previsión de riesgos y compromiso. Eres quien sostiene cuando las cosas se complican.',
-    rg:'La anticipación se vuelve ansiedad. Dudas, buscas garantías que no llegan y el "¿y si sale mal?" te paraliza o te agota.',
+    rg:'La anticipación se vuelve ansiedad. Dudas, buscas garantías que no llegan y el “¿y si sale mal?” te paraliza o te agota.',
     s:3, sTxt:'te sobreexiges y te lanzas a hacer para calmar la ansiedad, perdiendo el foco. Es tu señal de alarma.',
     g:9, gTxt:'confía y baja revoluciones; no todo riesgo necesita un plan de contingencia hoy.',
-    w:['Distingue el riesgo real del imaginado antes de actuar sobre él.','Tómate un tiempo acotado para decidir y luego sostén la decisión.','Apóyate en quien confías para contrastar, en vez de rumiar a solas.']},
- 7:{n:'Tipo 7 · Entusiasta',e:'Te mueve la posibilidad, la variedad y las ideas nuevas.',
+    w:['Pide reglas claras y certezas cuando el entorno es ambiguo.','Distingue el riesgo real del imaginado antes de actuar sobre él.','Tómate un tiempo acotado para decidir y luego sostén la decisión.','Apóyate en quien confías para contrastar, en vez de rumiar a solas.']},
+ 7:{n:'Tipo 7 · El entusiasta',e:'Te mueve la posibilidad, la variedad y las ideas nuevas.',
     fz:'Energía, optimismo y capacidad de generar ideas y abrir caminos.',
     rg:'Te dispersas y evitas lo pesado o doloroso. Empiezas mucho y cierras poco; la falta de foco termina pasando la cuenta.',
     s:1, sTxt:'te vuelves crítico y rígido, frustrado con lo que no resulta. Es tu señal de alarma.',
     g:5, gTxt:'profundiza y termina lo empezado; la calma y el foco también dan satisfacción.',
     w:['Cierra antes de abrir: termina una cosa antes de partir con la siguiente.','Quédate en la conversación difícil en vez de saltar a lo entretenido.','Elige menos frentes y comprométete de verdad con ellos.']},
- 8:{n:'Tipo 8 · Desafiador',e:'Te mueve la fuerza, el control y proteger lo que te importa.',
+ 8:{n:'Tipo 8 · El que protege',e:'Te mueve la fuerza, el control y proteger lo que te importa.',
     fz:'Decisión, coraje y capacidad de tomar el mando y proteger a los tuyos.',
     rg:'El control se vuelve dureza. Te cuesta mostrar vulnerabilidad y puedes pasar por encima de otros sin notarlo.',
     s:5, sTxt:'te aíslas y te guardas, desconfiando de todos. Es tu señal de alarma.',
     g:2, gTxt:'abre tu lado más empático y cuidador; la fuerza también se ejerce protegiendo, no solo imponiendo.',
-    w:['Antes de imponer, pregunta y escucha; el control compartido suma.','Permítete mostrar una duda o un límite: no te resta autoridad.','Mide el impacto de tu intensidad en quienes te rodean.']},
- 9:{n:'Tipo 9 · Pacificador',e:'Buscas armonía, calma y que todos estén bien.',
+    w:['Antes de imponer, pregunta y escucha; el control compartido suma.','Delega y permítete mostrar cansancio, una duda o un límite: no te resta autoridad.','Mide el impacto de tu intensidad en quienes te rodean.']},
+ 9:{n:'Tipo 9 · El conciliador',e:'Buscas armonía, calma y que todos estén bien.',
     fz:'Capacidad de mediar, escuchar y unir. Bajas la tensión y construyes acuerdos.',
     rg:'Evitas el conflicto y te cuesta priorizar. Postergas, te diluyes en lo de todos y dejas tus propias decisiones para después.',
     s:6, sTxt:'te llenas de dudas y ansiedad, anticipando problemas. Es tu señal de alarma.',
@@ -710,15 +721,15 @@ var EN_T={
 buildForm('en-form',EN_Q,EN_OPTS,'en');
 document.getElementById('en-legend').innerHTML='<b>Cómo responder:</b> pensando en <b>cómo eres tú en el trabajo</b> (tu forma de ser, no la que te gustaría), marca cuánto te identifica cada frase: <i>Nada</i>, <i>Poco</i>, <i>Algo</i>, <i>Bastante</i> o <i>Totalmente</i>. Ve rápido, por instinto.';
 var EN_CENTRO={
-  1:['Cuerpo · instinto','Tu emoción base es la ira y el enojo, y tu tema de fondo es el control, el límite y la autonomía. Los tipos 8, 9 y 1 procesan el mundo desde el cuerpo y la acción; su desgaste suele entrar por ahí.'],
-  8:['Cuerpo · instinto','Tu emoción base es la ira y el enojo, y tu tema de fondo es el control, el límite y la autonomía. Los tipos 8, 9 y 1 procesan el mundo desde el cuerpo y la acción; su desgaste suele entrar por ahí.'],
-  9:['Cuerpo · instinto','Tu emoción base es la ira y el enojo (muchas veces dormida), y tu tema de fondo es el control, el límite y la autonomía. Los tipos 8, 9 y 1 procesan el mundo desde el cuerpo y la acción.'],
-  2:['Corazón · emoción','Tu emoción base es la vergüenza y la tristeza, y tu tema de fondo es la imagen, el vínculo y sentirte valioso para otros. Los tipos 2, 3 y 4 procesan el mundo desde el corazón y la relación.'],
-  3:['Corazón · emoción','Tu emoción base es la vergüenza y la tristeza, y tu tema de fondo es la imagen, el vínculo y sentirte valioso para otros. Los tipos 2, 3 y 4 procesan el mundo desde el corazón y la relación.'],
-  4:['Corazón · emoción','Tu emoción base es la vergüenza y la tristeza, y tu tema de fondo es la imagen, el vínculo y sentirte valioso para otros. Los tipos 2, 3 y 4 procesan el mundo desde el corazón y la relación.'],
-  5:['Cabeza · mente','Tu emoción base es el miedo, y tu tema de fondo es la seguridad, entender y anticipar. Los tipos 5, 6 y 7 procesan el mundo desde la cabeza y el análisis.'],
-  6:['Cabeza · mente','Tu emoción base es el miedo, y tu tema de fondo es la seguridad, entender y anticipar. Los tipos 5, 6 y 7 procesan el mundo desde la cabeza y el análisis.'],
-  7:['Cabeza · mente','Tu emoción base es el miedo (tapado con entusiasmo y planes), y tu tema de fondo es la seguridad y mantener abiertas las opciones. Los tipos 5, 6 y 7 procesan el mundo desde la cabeza y el análisis.']
+  1:['Cuerpo · instinto','Tu emoción de fondo suele ser la rabia, y tu tema central es el control, el límite y la autonomía. Los tipos 8, 9 y 1 procesan el mundo desde el cuerpo y la acción; su desgaste suele entrar por ahí.'],
+  8:['Cuerpo · instinto','Tu emoción de fondo suele ser la rabia, y tu tema central es el control, el límite y la autonomía. Los tipos 8, 9 y 1 procesan el mundo desde el cuerpo y la acción; su desgaste suele entrar por ahí.'],
+  9:['Cuerpo · instinto','Tu emoción de fondo suele ser la rabia (muchas veces adormecida), y tu tema central es el control, el límite y la autonomía. Los tipos 8, 9 y 1 procesan el mundo desde el cuerpo y la acción.'],
+  2:['Corazón · emoción','Tu emoción de fondo suele ser la vergüenza y la pregunta por el propio valor, y tu tema central es la imagen, el vínculo y sentirte valioso para otros. Los tipos 2, 3 y 4 procesan el mundo desde el corazón y la relación.'],
+  3:['Corazón · emoción','Tu emoción de fondo suele ser la vergüenza y la pregunta por el propio valor, y tu tema central es la imagen, el vínculo y sentirte valioso para otros. Los tipos 2, 3 y 4 procesan el mundo desde el corazón y la relación.'],
+  4:['Corazón · emoción','Tu emoción de fondo suele ser la vergüenza y la pregunta por el propio valor, y tu tema central es la imagen, el vínculo y sentirte valioso para otros. Los tipos 2, 3 y 4 procesan el mundo desde el corazón y la relación.'],
+  5:['Cabeza · mente','Tu emoción de fondo suele ser el miedo, y tu tema central es la seguridad, entender y anticipar. Los tipos 5, 6 y 7 procesan el mundo desde la cabeza y el análisis.'],
+  6:['Cabeza · mente','Tu emoción de fondo suele ser el miedo, y tu tema central es la seguridad, entender y anticipar. Los tipos 5, 6 y 7 procesan el mundo desde la cabeza y el análisis.'],
+  7:['Cabeza · mente','Tu emoción de fondo suele ser el miedo (tapado con entusiasmo y planes), y tu tema central es la seguridad y mantener abiertas las opciones. Los tipos 5, 6 y 7 procesan el mundo desde la cabeza y el análisis.']
 };
 
 function resEN(){
@@ -733,27 +744,32 @@ function resEN(){
   var gapPct = sc[dom] ? Math.round((sc[dom]-sc[sec])/sc[dom]*100) : 100;
   var m=[];
   m.push({t:'head',kicker:'El tipo en el que más te reconoces',band:D.n,color:'#22255A',summary:D.e,nogauge:true});
-  m.push({t:'bullets',title:'Lectura técnica',items:[
-    'Tu tipo no es una etiqueta: es tu patrón por defecto bajo presión. No define lo que vales, sino por dónde reaccionas cuando aprieta.',
-    'Tu mayor fortaleza y tu mayor riesgo comparten raíz: son el mismo rasgo, sano o llevado al extremo. Por eso cada tipo se quiebra de forma tan predecible como su talento.',
-    'El eneagrama tiene dos movimientos: hacia dónde te vas bajo estrés y hacia dónde creces en equilibrio. Conocer los dos es lo que te vuelve especialista de ti mismo (Capítulo 6).'
+  m.push({t:'bullets',title:'Cómo leer este resultado',items:[
+    'Esto no es un diagnóstico ni una clasificación: es una invitación a observarte. No predice desempeño, no reemplaza una evaluación psicológica y no debe usarse para contratar, evaluar ni asignar tareas.',
+    'El tipo en el que más te reconoces da una pista sobre cómo sueles reaccionar bajo presión. No define lo que vales.',
+    'Tu mayor fortaleza y tu mayor riesgo suelen compartir raíz: son el mismo rasgo, sano o llevado al extremo. Por eso conocer tu fortaleza te ayuda a cuidarla y a pedir a tiempo lo que el entorno tiene que ajustar.',
+    'Lo útil es mirar el movimiento: hacia dónde puedes irte bajo estrés y qué recursos vuelven cuando recuperas el equilibrio (Capítulo 6).'
   ]});
   m.push({t:'kv',k:'Tu centro: '+C[0],v:C[1]});
   m.push({t:'kv',k:'Tu fortaleza en el trabajo',v:D.fz});
   m.push({t:'kv',k:'Tu riesgo de desgaste',v:D.rg});
   m.push({t:'lead',title:'Tus dos líneas: estrés y crecimiento',sub:'El modelo describe dos movimientos típicos por tipo. Tómalos como hipótesis para observarte, no como mecánica exacta: la evidencia sobre estos desplazamientos es mixta.'});
   m.push({t:'arrows',a:[
-    {k:'Bajo estrés · línea de desintegración',color:'#C0492F',bg:'#F7E6E1',text:'Cuando el estrés te supera te desplazas hacia el lado menos sano del '+S.n+'. En ti se ve así: '+D.sTxt+' Si te pillas ahí, es la señal para parar antes de quemarte.'},
-    {k:'En armonía · línea de crecimiento',color:'#4d7d16',bg:'#EEF4E4',text:'Cuando estás en equilibrio integras lo mejor del '+G.n+'. En ti se ve así: '+D.gTxt+' Ese es tu camino de crecimiento: no volverte otro, sino sumar esa cualidad.'}
+    {k:'Bajo estrés · hacia dónde puedes irte',color:'#C0492F',bg:'#F7E6E1',text:'Según el modelo, cuando el estrés te supera puedes desplazarte hacia la cara más tensa del '+S.n+'. Puede verse así: '+D.sTxt+' Si te pillas ahí, frena antes de quemarte.'},
+    {k:'En armonía · línea de crecimiento',color:'#4d7d16',bg:'#EEF4E4',text:'Según el modelo, cuando estás en equilibrio puedes integrar lo mejor del '+G.n+'. Lo que te ayuda: '+D.gTxt+' Ese es tu camino de crecimiento: no volverte otro, sino sumar esa cualidad.'}
   ]});
   var mez=[];
-  if(gapPct<=15){
+  if(sc[order[2]]===sc[dom]){
+    mez.push('Varios tipos puntúan igual en tus respuestas: el que aparece arriba no destaca sobre los demás. Lee sus descripciones en el Capítulo 6 y quédate con la que más te calce.');
+  } else if(gapPct<=15){
     mez.push('Tu '+D.n+' y tu '+Sec.n+' puntúan casi igual: no tienes un solo tipo dominante, funcionas como una mezcla real de los dos. Léelos a ambos como tuyos.');
   } else {
-    mez.push('El tipo que manda en ti es el '+D.n+'; tu segundo patrón es el '+Sec.n+', que aparece en ciertos contextos y matiza cómo se ve tu tipo principal.');
+    mez.push('El tipo en el que más te reconoces es el '+D.n+'; el segundo es el '+Sec.n+', que puede aparecer en ciertos contextos y matizar cómo se ve el primero.');
   }
-  if(adj(dom,sec)){
-    mez.push('Como el '+Sec.n+' es tu tipo vecino, funciona como tu "ala": le pone su sello a tu tipo principal. Lo que te aporta: '+Sec.e);
+  if(sc[order[2]]===sc[dom]){
+    // empate de tres o más: no se interpreta ala ni líneas
+  } else if(adj(dom,sec)){
+    mez.push('Como el '+Sec.n+' es tu tipo vecino, funciona como tu “ala”: le pone su sello a tu tipo principal. Lo que te aporta: '+Sec.e);
   } else if(sec===D.s){
     mez.push('Ojo con esto: tu segundo tipo es justo tu línea de estrés ('+Sec.n+'). Si puntúa alto, puede ser señal de que llevas un tiempo tensionado, más que tu tipo de fondo.');
   } else if(sec===D.g){
@@ -763,9 +779,9 @@ function resEN(){
   }
   m.push({t:'bullets',title:'Si tienes más de un tipo fuerte',items:mez});
   m.push({t:'bullets',title:'Qué trabajar',items:D.w.slice()});
-  m.push({t:'ref',text:'Capítulo 6, «Eneagrama: el mapa de tu desgaste»: los tres centros (cabeza, corazón y cuerpo), los nueve tipos y por dónde los quiebra el estrés, y cómo pasar del mapa individual al escudo colectivo del equipo.'});
-  m.push({t:'lead',title:'Del mapa individual al escudo colectivo',sub:'Un líder que conoce los tipos de su equipo previene desgaste antes de que aparezca: reparte carga, da feedback y sostiene a cada persona por donde de verdad lo necesita.'});
-  m.push({t:'note',text:'Este es exactamente el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene y se revierte el burnout, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a yaelsescovich@fourtms.com'});
+  m.push({t:'ref',text:'Capítulo 6, “Eneagrama: el mapa de tu desgaste”: los tres centros (cabeza, corazón y cuerpo), los nueve tipos y por dónde los quiebra el estrés, y cómo pasar del mapa individual al escudo colectivo del equipo.'});
+  m.push({t:'lead',title:'Del mapa individual al escudo colectivo',sub:'Si lideras, el mapa empieza por ti. En el equipo se usa solo si es voluntario y privado: nadie tipifica a nadie, y no sirve para asignar tareas, evaluar, promover ni contratar. Los acuerdos valen cuando nacen de lo que cada persona declaró de sí misma: “Yo rindo mejor con bloques de foco”, “A mí me cuesta decir que no”.'});
+  m.push({t:'note',text:'Este informe está completo por sí solo. Acompañar estos procesos es el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene el desgaste y se rediseña el trabajo que lo provoca, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a <a href="mailto:libro@fourtms.com">libro@fourtms.com</a> o agenda una reunión en <a href="https://fourtms.com/agenda" target="_blank" rel="noopener">fourtms.com/agenda</a>.'});
   showReport('en-res',m,'Informe · Eneagrama','Informe-eneagrama');
 }
 </script>
@@ -773,10 +789,11 @@ function resEN(){
 /* ===================== 03 · ENTORNO ===================== */
 var EV_OPTS=[{l:'Nunca',v:0},{l:'Rara vez',v:1},{l:'A veces',v:2},{l:'Seguido',v:3},{l:'Siempre',v:4}];
 var EV_DIMS={
- carga:{name:'Carga sostenible', inter:['Redistribuir el trabajo cuando alguien se sobrecarga, en vez de premiar al que aguanta.','Auditar las reuniones recurrentes y eliminar las que no aportan.','Respetar la desconexión: no esperar respuestas fuera de horario.','Dimensionar bien los proyectos antes de comprometer plazos.']},
- control:{name:'Autonomía y claridad', inter:['Aclarar qué decisiones puede tomar cada persona sin pedir permiso.','Dar contexto y "para qué", en vez de instrucciones al detalle.','Estabilizar las prioridades; si cambian, explicar por qué.','Reducir el micromanagement: confiar y revisar por resultados.']},
+ carga:{name:'Carga y ecología del tiempo', inter:['Redistribuir el trabajo cuando alguien se sobrecarga, en vez de premiar al que aguanta.','Auditar las reuniones recurrentes y eliminar las que no aportan.','Respetar la desconexión: no esperar respuestas fuera de horario.','Dimensionar bien los proyectos antes de comprometer plazos.']},
+ control:{name:'Claridad de roles y autonomía', inter:['Aclarar qué decisiones puede tomar cada persona sin pedir permiso.','Dar contexto y “para qué”, en vez de instrucciones al detalle.','Estabilizar las prioridades; si cambian, explicar por qué.','Reducir la microgestión: confiar y revisar por resultados.']},
  sentido:{name:'Reconocimiento y propósito', inter:['Reconocer el buen trabajo de forma específica y oportuna, no genérica.','Conectar cada tarea con el impacto que tiene y para quién.','Abrir oportunidades reales de aprender y crecer.','Hacer visible y valorar el esfuerzo extra cuando ocurre.']},
- vinculos:{name:'Seguridad y vínculos', inter:['Crear seguridad para pedir ayuda y equivocarse sin castigo.','Que la jefatura pregunte cómo está el equipo, no solo cómo van las tareas.','Abrir espacio a los desacuerdos sin represalias.','Fomentar el apoyo real entre compañeros.']}
+ vinculos:{name:'Seguridad psicológica y apoyo', inter:['Crear seguridad para pedir ayuda y equivocarse sin castigo.','Que la jefatura pregunte cómo está el equipo, no solo cómo van las tareas.','Abrir espacio a los desacuerdos sin represalias.','Fomentar el apoyo real entre compañeros.']},
+ justicia:{name:'Justicia y coherencia', inter:['Aplicar las mismas normas de respeto a todos, sin importar cargo, sueldo ni antigüedad.','Medir los valores con la misma vara que los resultados: ningún número compra el maltrato.','Definir metas y ascensos con criterios conocidos, no a dedo ni por amiguismo.','Revisar si lo que la empresa dice calza con lo que hace.']}
 };
 var EV_Q=[
  {t:'Las cargas de trabajo son realistas y sostenibles en el tiempo.',d:'carga'},
@@ -792,20 +809,22 @@ var EV_Q=[
  {t:'Las personas se sienten seguras para pedir ayuda o equivocarse.',d:'vinculos'},
  {t:'La jefatura se preocupa genuinamente por cómo está el equipo.',d:'vinculos'},
  {t:'Se pueden plantear desacuerdos sin miedo a represalias.',d:'vinculos'},
- {t:'Existe apoyo real entre compañeros.',d:'vinculos'}
+ {t:'Existe apoyo real entre compañeros.',d:'vinculos'},
+ {t:'Las normas de respeto valen para todos, sin importar cargo, sueldo ni antigüedad.',d:'justicia'},
+ {t:'Nadie es intocable: quien trata mal al resto enfrenta consecuencias, aunque traiga buenos resultados.',d:'justicia'}
 ];
-var EV_BANDTXT={Sano:'Tu entorno nutre',Mixto:'Entorno mixto',Desgasta:'Tu entorno desgasta',Alerta:'Entorno de alto riesgo'};
+var EV_BANDTXT={Sano:'Tu entorno nutre',Mixto:'Entorno mixto',Desgasta:'Tu entorno desgasta',Alerta:'Tu entorno desgasta mucho'};
 var EV_SUM={
  Sano:'Es un entorno que sostiene. La tarea es cuidarlo y no darlo por sentado.',
  Mixto:'Hay buenas bases y zonas que desgastan. Con foco en lo más débil, se inclina hacia lo sano.',
  Desgasta:'El entorno está pesando más de lo que sostiene. Vale la pena intervenir las dimensiones más bajas pronto.',
- Alerta:'El entorno está en alto riesgo de desgaste. Conviene actuar con decisión y, si lideras, empezar por ti.'
+ Alerta:'El entorno está desgastando mucho. Conviene actuar con decisión sobre las dimensiones más bajas y, si lideras, empezar por ti. Si ya te está afectando, conversarlo con un profesional de la salud es un buen paso.'
 };
 buildForm('ev-form',EV_Q,EV_OPTS,'ev');
 document.getElementById('ev-legend').innerHTML='<b>Cómo responder:</b> pensando en <b>cómo es tu trabajo o tu equipo hoy</b>, marca qué tan cierta es cada afirmación: <i>Nunca</i>, <i>Rara vez</i>, <i>A veces</i>, <i>Seguido</i> o <i>Siempre</i>. Aquí, mientras más alto, más sano es tu entorno.';
 function resEV(){
   if(!checkComplete('ev',EV_Q.length,'ev-warn'))return;
-  var ds={carga:0,control:0,sentido:0,vinculos:0}, dm={carga:0,control:0,sentido:0,vinculos:0};
+  var ds={carga:0,control:0,sentido:0,vinculos:0,justicia:0}, dm={carga:0,control:0,sentido:0,vinculos:0,justicia:0};
   EV_Q.forEach(function(q,i){ ds[q.d]+=ANS.ev[i]; dm[q.d]+=4; });
   var total=0,max=0; for(var k in ds){total+=ds[k];max+=dm[k];}
   var P=pct(total,max), band=bandPos(P);
@@ -813,11 +832,11 @@ function resEV(){
   var m=[];
   m.push({t:'head',kicker:'¿Tu entorno nutre o desgasta?',band:EV_BANDTXT[band.t],color:band.c,summary:EV_SUM[band.t],pct:P,leftLabel:'Desgasta',rightLabel:'Sano'});
   m.push({t:'bullets',title:'Cómo un entorno nutre o desgasta',items:[
-    'Esto no mide personas, mide diseño. Un entorno se sostiene sobre cuatro pilares: carga sostenible, autonomía, reconocimiento y seguridad. Cuando están, sostienen; cuando faltan, desgastan incluso a los más resilientes (Capítulo 4).',
-    'Los pilares no son independientes: el más débil arrastra al resto. Un equipo con buena carga pero sin seguridad para hablar termina igual de tensionado. Por eso se interviene primero la dimensión más baja, no todo a la vez.',
-    'Cuidado con el maquillaje corporativo: fruteros, charlas y frases de bienestar que no tocan la carga, la autonomía ni el trato real. El buen trato se mide en estas cuatro dimensiones, no en la vitrina.'
+    'Esto no mide personas, mide diseño: las cinco dimensiones del autodiagnóstico del Capítulo 4 (seguridad psicológica, claridad de roles, reconocimiento, justicia y coherencia, y ecología del tiempo). Cuando están, sostienen; cuando faltan, desgastan incluso a los más resilientes.',
+    'Las dimensiones no son independientes: la más débil arrastra al resto. Un equipo con buena carga pero sin seguridad para hablar termina igual de tensionado. Por eso se interviene primero la dimensión más baja, no todo a la vez.',
+    'Cuidado con el maquillaje corporativo: fruteros, charlas y frases de bienestar que no tocan la carga, la autonomía ni el trato real. El buen trato se mide en estas cinco dimensiones, no en la vitrina.'
   ]});
-  m.push({t:'label',text:'Las 4 dimensiones · de la más débil a la más fuerte'});
+  m.push({t:'label',text:'Las 5 dimensiones · de la más débil a la más fuerte'});
   order.forEach(function(k){
     var dp=pct(ds[k],dm[k]), db=bandPos(dp), D=EV_DIMS[k];
     m.push({t:'dim',name:D.name,pct:dp,color:db.c,bg:db.bg,tagText:dp+'% · '+db.t});
@@ -829,10 +848,10 @@ function resEV(){
     var dp=pct(ds[k],dm[k]), db=bandPos(dp), D=EV_DIMS[k];
     m.push({t:'dim',name:D.name,pct:dp,color:db.c,bg:db.bg,tagText:dp+'% · '+db.t,bodyTitle:'Cómo intervenir',body:D.inter.slice()});
   });
-  m.push({t:'ref',text:'Capítulo 4, «La arquitectura del buen trato» (el autodiagnóstico del entorno y los cuatro pilares), y Capítulo 7, «Diagnóstico y prevención».'});
-  var POSL={'Sano':'Tu entorno sostiene. Mantenerlo así es trabajo de diseño continuo, no un estado que se dé por sentado.','Mixto':'Tienes buenas bases y zonas que desgastan. Intervenir las más débiles, con método, inclina el conjunto hacia lo sano.','Desgasta':'Si el entorno pesa más de lo que sostiene, la solución no es pedirle más aguante al equipo: es rediseñar las dimensiones más débiles. Eso es un proyecto, y tiene método.','Alerta':'Un entorno de alto riesgo no se arregla con voluntarismo: se interviene con decisión las dimensiones más débiles. Eso es un proyecto, y tiene método.'};
+  m.push({t:'ref',text:'Capítulo 4, “La arquitectura del buen trato” (el autodiagnóstico del entorno y los cuatro pilares), y Capítulo 7, “Diagnóstico y prevención”.'});
+  var POSL={'Sano':'Tu entorno sostiene. Mantenerlo así es trabajo de diseño continuo, no un estado que se dé por sentado.','Mixto':'Tienes buenas bases y zonas que desgastan. Intervenir las más débiles, con método, inclina el conjunto hacia lo sano.','Desgasta':'Si el entorno pesa más de lo que sostiene, la solución no es pedirle más aguante al equipo: es rediseñar las dimensiones más débiles. Eso es un proyecto, y tiene método.','Alerta':'Un entorno que desgasta tanto no se arregla con voluntarismo: se intervienen con decisión las dimensiones más débiles. Eso es un proyecto, y tiene método.'};
   m.push({t:'lead',title:'Un entorno se diseña, no se hereda',sub:POSL[band.t]||''});
-  m.push({t:'note',text:'Este es exactamente el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene y se revierte el burnout, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a yaelsescovich@fourtms.com'});
+  m.push({t:'note',text:'Este informe está completo por sí solo. Acompañar estos procesos es el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene el desgaste y se rediseña el trabajo que lo provoca, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a <a href="mailto:libro@fourtms.com">libro@fourtms.com</a> o agenda una reunión en <a href="https://fourtms.com/agenda" target="_blank" rel="noopener">fourtms.com/agenda</a>.'});
   showReport('ev-res',m,'Informe · Entorno laboral','Informe-entorno-laboral');
 }
 </script>
@@ -843,22 +862,22 @@ var IM_DIMS={
  claridad:{name:'Claridad y foco',
    corto:'Cada lunes, manda a tu equipo las 3 prioridades de la semana.',
    medio:'Instala un feedback breve y frecuente (15 min), no solo la evaluación anual.',
-   largo:'Define qué es "hacerlo bien" en cada rol y revísalo cada semestre.'},
+   largo:'Define qué es “hacerlo bien” en cada rol y revísalo cada semestre.'},
  carga:{name:'Carga y protección',
    corto:'Revisa esta semana la carga real de cada persona y saca o reprioriza algo.',
    medio:'Audita las reuniones recurrentes, elimina las que no aportan y protege bloques de foco.',
-   largo:'Establece una política de desconexión y un protocolo de reintegro tras licencia, cuidando la Ley Karin.'},
+   largo:'Establece una política de desconexión y una forma acordada de recibir a quien vuelve de una licencia: sin preguntar por su salud, ajustando la carga y con fecha de revisión.'},
  reconoce:{name:'Reconocimiento y desarrollo',
    corto:'Reconoce esta semana, de forma específica, un buen trabajo de alguien.',
    medio:'Ten una conversación de desarrollo (no de tareas) con cada persona del equipo.',
    largo:'Construye rutas de crecimiento y aprendizaje visibles para el equipo.'},
  seguridad:{name:'Seguridad psicológica',
-   corto:'En tu próxima reunión 1:1, pregunta "¿cómo estás?" antes de "¿cómo vas?".',
+   corto:'En tu próximo uno a uno, pregunta no solo “¿en qué vas?”, sino “¿cómo vas?”.',
    medio:'Admite un error tuyo frente al equipo y agradece a quien plantee un desacuerdo.',
    largo:'Define y comunica qué conductas no se toleran, y actúa cuando aparezcan (clima y Ley Karin).'}
 };
 var IM_Q=[
- {t:'Explico el "para qué" detrás de lo que pido, no solo la tarea.',d:'claridad'},
+ {t:'Explico el “para qué” detrás de lo que pido, no solo la tarea.',d:'claridad'},
  {t:'Mi equipo tiene claras sus prioridades de la semana.',d:'claridad'},
  {t:'Doy feedback concreto y a tiempo, no solo en la evaluación anual.',d:'claridad'},
  {t:'Aclaro las expectativas antes de que el trabajo empiece.',d:'claridad'},
@@ -880,10 +899,10 @@ var IM_SUM={
  Sano:'Tu estilo protege a tu equipo del desgaste. El plan es sostenerlo y afinar lo que aún queda débil.',
  Mixto:'Haces bien varias cosas y hay brechas claras. El plan de abajo parte por las más débiles.',
  Desgasta:'Tu estilo, hoy, está sumando desgaste a tu equipo. La buena noticia: casi todo esto se entrena. Empieza por lo de corto plazo.',
- Alerta:'Hay señales de que tu estilo está dañando el clima. Vale la pena tomarlo en serio y empezar esta semana.'
+ Alerta:'Hay señales de que tu estilo está dañando el clima. Vale la pena tomarlo en serio y empezar esta semana. Si tú o alguien de tu equipo ya está al límite, el primer paso es apoyo profesional de salud.'
 };
 buildForm('im-form',IM_Q,IM_OPTS,'im');
-document.getElementById('im-legend').innerHTML='<b>Cómo responder:</b> pensando en <b>lo que haces tú como líder en tu día a día</b>, marca con qué frecuencia haces cada cosa: <i>Nunca</i>, <i>Rara vez</i>, <i>A veces</i>, <i>Seguido</i> o <i>Siempre</i>. Sé honesto: el informe solo lo ves tú.';
+document.getElementById('im-legend').innerHTML='<b>Cómo responder:</b> pensando en <b>lo que haces tú como líder en tu día a día</b>, marca con qué frecuencia haces cada cosa: <i>Nunca</i>, <i>Rara vez</i>, <i>A veces</i>, <i>Seguido</i> o <i>Siempre</i>.';
 function resIM(){
   if(!checkComplete('im',IM_Q.length,'im-warn'))return;
   var ds={claridad:0,carga:0,reconoce:0,seguridad:0}, dm={claridad:0,carga:0,reconoce:0,seguridad:0};
@@ -894,9 +913,9 @@ function resIM(){
   var m=[];
   m.push({t:'head',kicker:'Tu impacto en el clima',band:IM_BANDTXT[band.t],color:band.c,summary:IM_SUM[band.t],pct:P,leftLabel:'Desgasta',rightLabel:'Sano'});
   m.push({t:'bullets',title:'Cómo un líder construye el clima',items:[
-    'El clima no es tu personalidad, es la suma de conductas concretas y entrenables. Lo que mides son las cuatro palancas del líder guardián: claridad, carga, reconocimiento y seguridad psicológica (Capítulo 5).',
+    'El clima no es tu personalidad, es la suma de conductas concretas y entrenables. Lo que mides son cuatro áreas de lo que hace un líder guardián: claridad, carga, reconocimiento y seguridad psicológica (Capítulos 4 y 5).',
     'Liderar no es gestionar tareas: es dar contexto, proteger la carga, reconocer y sostener un espacio donde se pueda pedir ayuda y equivocarse. Ahí se juega el clima, no en cuánto exiges.',
-    'Y parte ya no es opcional: cuidar el reintegro tras una licencia, actuar frente a conductas que dañan el clima y sostener la seguridad psicológica son también deberes de la Ley Karin (Capítulo 2).'
+    'Y una parte ya no es opcional: con la Ley Karin, prevenir el acoso y la violencia en el trabajo, y actuar cuando aparecen, es obligación de la empresa (Capítulo 2). Cuidar el reintegro tras una licencia, en cambio, es parte de tu rol como líder (Capítulo 5).'
   ]});
   m.push({t:'label',text:'Tus 4 palancas como líder'});
   order.forEach(function(k){
@@ -913,10 +932,10 @@ function resIM(){
   m.push({t:'tier',color:'#C0492F',titleColor:'#C0492F',title:'Corto plazo',when:'Esta semana',items:corto});
   m.push({t:'tier',color:'#D8A828',titleColor:'#b8891c',title:'Mediano plazo',when:'Próximos 1 a 3 meses',items:medio});
   m.push({t:'tier',color:'#6FA52C',titleColor:'#4d7d16',title:'Largo plazo',when:'3 a 12 meses · cultura',items:largo});
-  m.push({t:'ref',text:'Capítulo 5 («Liderazgo humano y consciente»), Capítulo 8 («Implementación del antídoto») y las cuatro reglas del Capítulo 10. Para tus obligaciones legales, Capítulo 2 («Ley Karin»).'});
-  var POSL={'Sano':'Tu estilo protege a tu equipo. Sostenerlo y afinar lo que queda débil es lo que mantiene el clima en el tiempo.','Mixto':'Haces bien varias cosas y hay brechas claras. Cerrar las más débiles, con acompañamiento, mueve el clima de tu equipo rápido.','Desgasta':'Si tu estilo hoy suma desgaste, la buena noticia es que casi todo esto se entrena. Un líder que aprende a proteger a su equipo cambia el clima —y los resultados— en meses.','Alerta':'Hay señales de que tu estilo daña el clima. La buena noticia: esto se entrena. Con acompañamiento, el cambio se nota en meses, no en años.'};
+  m.push({t:'ref',text:'Capítulo 5 (“Liderazgo humano y consciente”), Capítulo 8 (“Implementación del antídoto”) y las cuatro reglas del Capítulo 10. Para tus obligaciones legales, Capítulo 2 (“Ley Karin: el grito de alerta”).'});
+  var POSL={'Sano':'Nada de esto es un don con el que se nace. Es un músculo que se entrena con hábitos simples y sostenidos (Capítulo 5).','Mixto':'Nada de esto es un don con el que se nace. Es un músculo que se entrena con hábitos simples y sostenidos (Capítulo 5).','Desgasta':'Nada de esto es un don con el que se nace. Es un músculo que se entrena con hábitos simples y sostenidos (Capítulo 5).','Alerta':'Nada de esto es un don con el que se nace. Es un músculo que se entrena con hábitos simples y sostenidos (Capítulo 5).'};
   m.push({t:'lead',title:'El clima se entrena',sub:POSL[band.t]||''});
-  m.push({t:'note',text:'Este es exactamente el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene y se revierte el burnout, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a yaelsescovich@fourtms.com'});
+  m.push({t:'note',text:'Este informe está completo por sí solo. Acompañar estos procesos es el trabajo de Yael Sescovich y 4T Management Solutions: diseñar con líderes y organizaciones cómo se previene el desgaste y se rediseña el trabajo que lo provoca, cómo se atrae y retiene al talento correcto, y cómo se ordenan los equipos para que rendir no cueste la salud. Si quieres llevar esto a tu equipo o tu empresa, escríbele a <a href="mailto:libro@fourtms.com">libro@fourtms.com</a> o agenda una reunión en <a href="https://fourtms.com/agenda" target="_blank" rel="noopener">fourtms.com/agenda</a>.'});
   showReport('im-res',m,'Informe · Impacto en el clima','Informe-impacto-clima');
 }
 </script>
@@ -924,27 +943,27 @@ function resIM(){
 /* ===================== 05 · PLANTILLAS ===================== */
 var TPL=[
  {h:'Reunión 1:1 que sí sirve', why:'Para que el uno a uno no se vuelva un reporte de tareas. Empieza por la persona.',
-  x:'Hola [nombre]:\n\nNos juntamos el [día] a las [hora] por 30 minutos. La idea es conversar de cómo estás y cómo vas, en ese orden.\n\nPara aprovecharla, piensa en:\n1. ¿Cómo has estado esta semana, dentro y fuera del trabajo?\n2. ¿Qué te está costando o trabando hoy?\n3. ¿En qué te puedo ayudar o destrabar yo?\n4. Una cosa que quieras proponer o cambiar.\n\nNo necesitas preparar nada formal. Nos vemos.'},
+  x:'Hola [nombre]:\n\nNos juntamos el [día] a las [hora] por 15 minutos, y la idea es repetirlo cada dos semanas. No vamos a hablar solo de tareas: la pregunta no es solo en qué vas, sino cómo vas.\n\nPara aprovecharla, piensa en:\n1. ¿Cómo has estado estas dos semanas en el trabajo?\n2. ¿Qué te está costando o trabando hoy?\n3. ¿En qué te puedo ayudar o destrabar yo?\n4. Una cosa que quieras proponer o cambiar.\n\nNo necesitas preparar nada formal. Nos vemos.'},
  {h:'Política de desconexión', why:'Para poner por escrito que fuera de horario, se descansa. Lo que no se nombra, no se respeta.',
-  x:'Equipo:\n\nPara cuidar la energía de todos, acordemos estas reglas de desconexión:\n\n· Horario de trabajo: de [hora] a [hora].\n· Fuera de ese horario y en días libres, no se espera que respondas mensajes ni correos.\n· Si yo escribo fuera de horario, es para no olvidarlo: NO esperes responder hasta tu próxima jornada.\n· Urgencias reales (definidas como [ejemplo]) van por [canal], y son la excepción, no la norma.\n· Las vacaciones son para desconectar. Antes de salir coordinamos respaldo.\n\nSi algo de esto no se está cumpliendo, dímelo.'},
- {h:'Claridad de métricas y del rol', why:'Para que cada persona sepa qué es hacerlo bien. La ambigüedad agota.',
-  x:'Hola [nombre]:\n\nQuiero que tengamos total claridad sobre tu rol. Esto es lo que entiendo yo; lo revisamos juntos y ajustamos.\n\n· Tu foco principal: [resultado clave del rol].\n· Cómo medimos que va bien: [2 o 3 métricas o señales concretas].\n· Qué decisiones puedes tomar sin pedir permiso: [listar].\n· Qué decisiones conviene conversar antes: [listar].\n· Con qué frecuencia revisamos: [semanal / quincenal].\n\nDime qué de esto te hace sentido y qué cambiarías.'},
- {h:'Conversación de carga de trabajo', why:'Para cuando alguien está sobrecargado y hay que repriorizar de verdad, no sumar.',
-  x:'Hola [nombre]:\n\nNoté que estás con mucha carga y quiero ordenarlo contigo, no agregarte una cosa más.\n\nHagamos esto:\n1. Listemos todo lo que tienes hoy sobre la mesa.\n2. Marquemos qué es realmente prioridad esta semana y qué puede esperar.\n3. Veamos qué se posterga, qué se delega y qué dejamos de hacer.\n4. Si entra algo nuevo, acordamos qué sale.\n\nLa meta no es que aguantes más, es que trabajes en lo que importa sin quemarte.'},
- {h:'Reintegro tras una licencia', why:'Para que volver no sea caer de nuevo en lo mismo. Importa para la persona y para cumplir la Ley Karin.',
-  x:'Hola [nombre]:\n\nQué bueno tenerte de vuelta. Quiero que tu reintegro sea cuidado, no un volver a la avalancha.\n\nPropongo:\n· Tu primer [día/semana] lo usamos para reconectar, sin metas exigentes.\n· Pongámonos al día con calma: te resumo lo importante que pasó.\n· Revisemos tu carga antes de reactivarla por completo.\n· Si algo del entorno contribuyó a tu ausencia, quiero escucharlo y trabajarlo.\n\nVamos a tu ritmo. Dime cómo te acomoda partir.'},
- {h:'Reconocimiento que nutre', why:'Para reconocer de verdad: específico y a tiempo. El "buen trabajo" genérico no llega.',
+  x:'Equipo:\n\nPara cuidar la energía de todos, acordemos estas reglas de comunicación y desconexión:\n\n· Horario de trabajo: de [hora] a [hora]. Los requerimientos se envían en ese horario.\n· Fuera de ese horario, en fines de semana y en días libres, no se espera ni se exige respuesta a mensajes ni correos.\n· Si alguien necesita dejar algo escrito fuera de hora para no olvidarlo, usa el envío programado para que llegue al inicio del día hábil siguiente.\n· Bloques de foco: entre [hora] y [hora] y entre [hora] y [hora] no agendamos reuniones ni llamadas internas y no se espera respuesta inmediata.\n· Urgencias reales (definidas como [ejemplo]) se resuelven por llamada. Si no amerita una llamada, puede esperar al horario hábil.\n· Las vacaciones son para desconectar. Antes de salir coordinamos respaldo.\n\nSi algo de esto no se está cumpliendo, dímelo.'},
+ {h:'Documento de claridad: métricas y autonomía', why:'Para que cada persona sepa qué es hacerlo bien y hasta dónde llega su autonomía. La ambigüedad agota. Lo completa cada persona y lo acuerda con su jefatura; cabe en una página.',
+  x:'Cargo / responsable / periodo: [completar].\n\nLas tres métricas por las que se evalúa mi trabajo:\n· [métrica 1 y su meta]\n· [métrica 2 y su meta]\n· [métrica 3 y su meta]\n\nDecisiones que puedo tomar por mi cuenta: [por ejemplo: aprobar gastos hasta cierto monto, ajustar la priorización del equipo, responder consultas de clientes dentro de cierto rango].\n\nDecisiones que debo escalar: [por ejemplo: gastos sobre cierto monto, compromisos de plazo con un cliente clave, cambios que afecten a otra área].\n\nRevisado y acordado con la jefatura. Fecha: [__].'},
+ {h:'Conversación de carga de trabajo', why:'Para cuando alguien está sobrecargado y hay que repriorizar de verdad, no sumar. Este mensaje solo agenda la conversación: esa se tiene en persona.',
+  x:'Hola [nombre]:\n\nRevisé cómo vienen las últimas semanas y noto que han sido muy densas. Quiero ordenarlo contigo, no agregarte una cosa más.\n\n¿Nos juntamos en persona el [día] a las [hora]? La idea es:\n1. Ver juntos qué parte de la carga te está consumiendo más.\n2. Decidir qué tarea pausamos, cuál postergamos y cuál asumo yo.\n3. Dejar una fecha para revisar si funcionó.\n\nLa meta es que trabajes en lo que importa sin quemarte, no que aguantes más.'},
+ {h:'Reintegro tras una licencia', why:'Para que volver no sea caer de nuevo en lo mismo. La vuelta se prepara desde el trabajo.',
+  x:'Hola [nombre]:\n\nQué bueno que estás de vuelta. No necesito saber nada de tu salud; eso es tuyo. Lo que sí quiero es conversar cómo hacemos para que la vuelta funcione.\n\nPropongo:\n· Te resumo con calma lo importante que pasó y te cuento quién te acompaña estos primeros días.\n· Partimos con menos carga, sin dejarte fuera de reuniones ni de decisiones.\n· Conversemos en persona el [día]: desde el trabajo, ¿hay algo que te haya pesado y que yo deba saber?\n· Acordamos qué retomas ahora, qué queda para después y qué se redistribuye, con una fecha para revisarlo.\n\nDime cómo te acomoda partir.'},
+ {h:'Reconocimiento que nutre', why:'Para que la persona sepa qué hizo bien y por qué importa.',
   x:'Hola [nombre]:\n\nQuiero reconocer algo concreto: [qué hizo exactamente].\n\nLo valoro porque [impacto real: en el cliente, el equipo, el resultado]. No es menor, y quería que lo supieras.\n\nGracias por cómo lo hiciste. Sigue así.'},
  {h:'Acuerdo de convivencia del equipo', why:'Para definir entre todos las reglas mínimas de cómo trabajamos y nos tratamos.',
   x:'Equipo:\n\nQuiero que definamos juntos cómo queremos trabajar. Propongo estas reglas base y las completamos entre todos:\n\n· Reuniones: empiezan y terminan a la hora. Sin reunión sin objetivo.\n· Respuestas: en horario, dentro de [tiempo razonable]. Fuera de horario, no se espera.\n· Errores: se avisan temprano y se resuelven sin buscar culpables.\n· Desacuerdos: se dicen de frente y con respeto, no por los pasillos.\n· Ayuda: pedirla es bienvenido, no es debilidad.\n· [Agreguen las que el equipo proponga].\n\nLas dejamos a la vista y las revisamos en [mes].'}
 ];
 var TPL_P=[
-  'La persona antes que la tarea. Es el protocolo E.C.O. del Capítulo 5 aplicado a cada semana: primero cómo estás, después cómo vas.',
+  'La persona antes que la tarea. Es el uno a uno de verdad del Capítulo 5: quince minutos cada dos semanas, agendados y respetados, donde no se habla solo de tareas.',
   'La desconexión es mantenimiento, no premio. Y lo que no se pone por escrito, no se respeta (Capítulos 1 y 8).',
-  'La ambigüedad agota. Saber qué es hacerlo bien y qué se puede decidir sin permiso es un pilar del buen trato (Capítulos 4 y 5).',
-  'No se trata de aguantar más, sino de repriorizar: si entra algo, sale algo (Capítulo 8, las primeras 48 horas).',
-  'Volver no debe ser recaer. Cuidar el reintegro es buen trato y además un deber de la Ley Karin (Capítulos 2 y 5).',
-  'Reconocer específico y a tiempo. El "buen trabajo" genérico no mueve la aguja (Capítulo 4, los pilares del reconocimiento).',
+  'La ambigüedad agota. Saber qué es hacerlo bien y qué se puede decidir sin permiso es un pilar del buen trato (Capítulos 4 y 8).',
+  'Repriorizar, no apilar: qué se pausa, qué se posterga y qué asume la jefatura, con fecha de revisión. Es el protocolo E.C.O. del Capítulo 5.',
+  'Lo clínico es de la persona y su médico; lo laboral es tuyo: no preguntas por su salud y te haces cargo de la carga, la claridad, las relaciones y la forma de trabajar (Capítulo 5, “Cuando alguien vuelve de una licencia”).',
+  'Reconocer específico y oportuno. El “buen trabajo” genérico no mueve la aguja (Capítulo 4, el tercero de los cuatro pilares).',
   'La seguridad psicológica se construye con reglas explícitas de cómo nos tratamos, acordadas por el equipo (Capítulos 4 y 5).'
 ];
 
@@ -982,11 +1001,11 @@ var CHK=[
    'Reviso la carga real de mi equipo y la ajusto cuando hace falta.',
    'Cuando entra algo nuevo, defino qué sale; no apilo sin más.',
    'Protejo bloques de foco y elimino las reuniones que no aportan.',
-   'Respeto la desconexión: no espero respuestas fuera de horario.',
+   'Respeto la desconexión: no envío requerimientos ni espero respuestas fuera de horario.',
    'Cuido el reintegro de quien vuelve de vacaciones o licencia.']],
  ['Claridad y autonomía',[
    'Cada persona tiene claras sus prioridades de la semana.',
-   'Explico el "para qué", no solo la tarea.',
+   'Explico el “para qué”, no solo la tarea.',
    'Defino qué decisiones puede tomar cada uno sin pedir permiso.',
    'Mantengo las prioridades estables; si cambian, explico por qué.',
    'Confío y reviso por resultados, en vez de vigilar cada paso.']],
@@ -1001,10 +1020,10 @@ var CHK=[
    'Mi equipo se siente seguro para plantearme un error o un desacuerdo.',
    'Admito mis propios errores frente al equipo.',
    'Actúo cuando detecto una conducta que daña el clima.',
-   'Conozco mis obligaciones de Ley Karin y tengo un canal claro para reportar.']]
+   'Conozco mis obligaciones de la Ley Karin y mi equipo sabe cuál es el canal de denuncia y que tiene resguardo desde el día uno.']]
 ];
 var CHK_SUB=[
-  'Que rendir no cueste la salud. Es el primer pilar del buen trato: sin carga sostenible, lo demás se cae (Capítulos 4 y 8).',
+  'Que rendir no cueste la salud. Sin carga sostenible, lo demás se cae: depurar la agenda, proteger el foco y respetar la desconexión (Capítulo 8).',
   'La ambigüedad y la microgestión agotan. Dar contexto y decidir dónde puede cada uno es liderar, no soltar (Capítulo 5).',
   'El reconocimiento específico y el sentido son combustible; genéricos o ausentes, desgastan (Capítulo 4).',
   'Un equipo que puede pedir ayuda y equivocarse sin castigo no se quiebra en silencio. Y aquí se cruzan tus deberes legales (Capítulos 5 y 2).'
@@ -1021,7 +1040,7 @@ var chkState={};
       idx++;
     });
   });
-  h+='<p style="font-size:.85rem;color:#4a4d70;background:#eef0f7;border-radius:8px;padding:11px 13px;margin:16px 0 0;line-height:1.5">No se trata de marcar las veinte: las que hoy no puedes marcar son tu lista de trabajo. Elige una y pártela esta semana.</p>';
+  h+='<p style="font-size:.85rem;color:#4a4d70;background:#eef0f7;border-radius:8px;padding:11px 13px;margin:16px 0 0;line-height:1.5">No hace falta marcar las veinte: las que hoy no puedes marcar son tu lista de trabajo. Elige una y pártela esta semana.</p>';
   document.getElementById('chk-list').innerHTML=h;
 })();
 function tglChk(i){
@@ -1034,7 +1053,7 @@ function tglChk(i){
 }
 
 /* ===================== MATRIZ R.E.S.P.I.R.A. ===================== */
-var MX=[{"t": "head", "kicker": "EL MÉTODO DEL LIBRO, EN UNA PÁGINA", "band": "Matriz R.E.S.P.I.R.A.", "color": "#2f6f8f", "summary": "Esta es la hoja que amarra todo el libro en una página. Tómala letra por letra, no todas a la vez. Para cada una escribe tus propias respuestas: una señal, una decisión, una conversación, una métrica, una fecha y un nombre. Si una fila queda sin responsable o sin fecha, todavía no es un plan: es una intención.", "nogauge": true}, {"t": "tier", "color": "#C0492F", "title": "R — Reconocer señales y datos", "when": "Mirar de verdad: qué dice el cuerpo, qué dicen los números y qué se calla en las reuniones.", "items": ["<b>Señal que observo:</b> silencios nuevos en reuniones, irritabilidad, conexión fuera de horario.", "<b>Decisión que tomo:</b> dejar de normalizar esa señal y ponerla sobre la mesa esta semana.", "<b>Conversación que sostengo:</b> \"He notado esto. ¿Cómo lo estás viviendo tú?\"", "<b>Métrica que reviso:</b> licencias, rotación y conexión fuera de jornada.", "<b>Fecha de seguimiento:</b> dentro de los próximos 14 días.", "<b>Responsable:</b> un nombre y apellido; \"todos\" no cuenta."]}, {"t": "tier", "color": "#E07B39", "title": "E — Examinar el diseño del trabajo", "when": "El desgaste casi nunca es gente débil: es cómo está armada la pega.", "items": ["<b>Señal que observo:</b> en ese puesto se quema todo el que llega, sea quien sea.", "<b>Decisión que tomo:</b> revisar carga, autonomía, claridad de rol y aislamiento de ese puesto.", "<b>Conversación que sostengo:</b> con quien hace la tarea: qué parte de su pega no agrega valor.", "<b>Métrica que reviso:</b> horas de reunión semanales y tareas de bajo valor eliminadas.", "<b>Fecha de seguimiento:</b> al cierre del mes.", "<b>Responsable:</b> la jefatura directa del puesto examinado."]}, {"t": "tier", "color": "#D8A828", "title": "S — Simplificar carga, flujos y reuniones", "when": "Sacar lo que no suma. Menos ruido, más foco.", "items": ["<b>Señal que observo:</b> agendas llenas y el trabajo real postergado a la noche.", "<b>Decisión que tomo:</b> auditar las reuniones recurrentes, eliminar o rediseñar las que no tengan propósito ni decisión, e instalar bloques de foco.", "<b>Conversación que sostengo:</b> con el equipo: qué reunión eliminamos primero y qué pasa a asincrónico.", "<b>Métrica que reviso:</b> número de reuniones y correos fuera de horario, antes y después.", "<b>Fecha de seguimiento:</b> a las dos semanas del cambio.", "<b>Responsable:</b> quien convoca las reuniones que se eliminan."]}, {"t": "tier", "color": "#6FA52C", "title": "P — Proteger límites, dignidad y canales seguros", "when": "Que desconectarse no cueste caro y que levantar la mano no sea un acto de valentía.", "items": ["<b>Señal que observo:</b> nadie usa los canales de denuncia, o se responden correos a medianoche.", "<b>Decisión que tomo:</b> reglas explícitas de desconexión y resguardo desde el día uno ante cualquier denuncia.", "<b>Conversación que sostengo:</b> con las jefaturas: qué conducta no se tolera, traiga los resultados que traiga.", "<b>Métrica que reviso:</b> uso y confianza en los canales; denuncias atendidas en plazo.", "<b>Fecha de seguimiento:</b> revisión trimestral, con o sin denuncias.", "<b>Responsable:</b> quien lidera Personas, con respaldo visible de la dirección."]}, {"t": "tier", "color": "#3f8e8a", "title": "I — Intervenir conversaciones y prioridades", "when": "La conversación que vienes postergando es la intervención más barata y más potente.", "items": ["<b>Señal que observo:</b> una conversación pendiente que llevo semanas postergando.", "<b>Decisión que tomo:</b> agendarla antes del viernes, con el protocolo E.C.O.: explorar, co-diseñar, operacionalizar.", "<b>Conversación que sostengo:</b> la del alivio concreto: qué sacamos, qué se posterga, qué se queda.", "<b>Métrica que reviso:</b> acuerdos con fecha de revisión que efectivamente se revisaron.", "<b>Fecha de seguimiento:</b> la que quedó escrita en el acuerdo; sin fecha no hay acuerdo.", "<b>Responsable:</b> quien sostuvo la conversación."]}, {"t": "tier", "color": "#2f6f8f", "title": "R — Revisar métricas humanas y operativas", "when": "Lo que no se mira, se repite. Licencias, rotación y silencio también son resultados.", "items": ["<b>Señal que observo:</b> el tablero solo tiene números de negocio y ninguno de personas.", "<b>Decisión que tomo:</b> sumar al tablero quincenal las señales humanas junto a las operativas.", "<b>Conversación que sostengo:</b> con mi propio jefe o directorio: estos números también son resultados.", "<b>Métrica que reviso:</b> que el tablero exista, se mire y gatille decisiones.", "<b>Fecha de seguimiento:</b> cada quince días, el mismo día del tablero.", "<b>Responsable:</b> quien presenta el tablero."]}, {"t": "tier", "color": "#7a6cae", "title": "A — Ajustar mediante pilotos", "when": "Nada de reformas épicas: prueba chico, mide, corrige y recién entonces escala.", "items": ["<b>Señal que observo:</b> ganas de lanzar una reforma gigante \"de una vez por todas\".", "<b>Decisión que tomo:</b> elegir un equipo, un cambio y 30 días. Probar chico antes de escalar.", "<b>Conversación que sostengo:</b> con el equipo piloto: qué probamos y cómo sabremos si funcionó.", "<b>Métrica que reviso:</b> el antes y el después del piloto, en un indicador humano y uno de negocio.", "<b>Fecha de seguimiento:</b> día 30 del piloto, sin excepción.", "<b>Responsable:</b> quien pidió el cambio, no quien lo sufre."]}, {"t": "note", "text": "Si puedes explicar el método en una frase —mirar de verdad, rediseñar lo que desgasta y sostenerlo con decisiones medibles—, ya lo tienes. Lo demás es práctica."}];
+var MX=[{"t": "head", "kicker": "EL MÉTODO DEL LIBRO, EN UNA PÁGINA", "band": "Matriz R.E.S.P.I.R.A.", "color": "#2f6f8f", "summary": "Esta es la hoja que amarra todo el libro en una página. Tómala letra por letra, no todas a la vez. Para cada una escribe tus propias respuestas: una señal, una decisión, una conversación, una métrica, una fecha y un nombre. Si una letra queda sin responsable o sin fecha, todavía no es un plan: es una intención.", "nogauge": true}, {"t": "tier", "color": "#C0492F", "title": "R — Reconocer señales y datos", "when": "Mirar de verdad: qué dice el cuerpo, qué dicen los números y qué se calla en las reuniones.", "items": ["<b>Señal que observo:</b> silencios nuevos en reuniones, más roces en el equipo, conexión fuera de horario.", "<b>Decisión que tomo:</b> dejar de normalizar esa señal y ponerla sobre la mesa esta semana.", "<b>Conversación que sostengo:</b> “He notado esto. ¿Cómo lo estás viviendo tú y qué del trabajo lo está empujando?”.", "<b>Métrica que reviso:</b> licencias médicas (en datos agregados, sin diagnósticos), rotación y conexión fuera de jornada.", "<b>Fecha de seguimiento:</b> dentro de los próximos 14 días.", "<b>Responsable:</b> un nombre y apellido; “todos” no cuenta."]}, {"t": "tier", "color": "#E07B39", "title": "E — Examinar el diseño del trabajo", "when": "El desgaste casi nunca es gente débil: es cómo está armada la pega.", "items": ["<b>Señal que observo:</b> en ese puesto se quema todo el que llega, sea quien sea.", "<b>Decisión que tomo:</b> revisar carga, autonomía, claridad de rol y aislamiento de ese puesto.", "<b>Conversación que sostengo:</b> con quien hace la tarea: qué parte de su pega no agrega valor.", "<b>Métrica que reviso:</b> horas de reunión semanales y tareas de bajo valor eliminadas.", "<b>Fecha de seguimiento:</b> al cierre del mes.", "<b>Responsable:</b> la jefatura directa del puesto examinado."]}, {"t": "tier", "color": "#D8A828", "title": "S — Simplificar carga, flujos y reuniones", "when": "Sacar lo que no suma. Menos ruido, más foco.", "items": ["<b>Señal que observo:</b> agendas llenas y el trabajo real postergado a la noche.", "<b>Decisión que tomo:</b> auditar las reuniones recurrentes, eliminar o rediseñar las que no tengan propósito ni decisión, e instalar bloques de foco.", "<b>Conversación que sostengo:</b> con el equipo: qué reunión eliminamos primero y qué pasa a asíncrono.", "<b>Métrica que reviso:</b> número de reuniones y correos fuera de horario, antes y después.", "<b>Fecha de seguimiento:</b> a las dos semanas del cambio.", "<b>Responsable:</b> quien convoca las reuniones que se eliminan."]}, {"t": "tier", "color": "#6FA52C", "title": "P — Proteger límites, dignidad y canales seguros", "when": "Que desconectarse no cueste caro y que levantar la mano no sea un acto de valentía.", "items": ["<b>Señal que observo:</b> nadie usa los canales de denuncia, o se responden correos a medianoche.", "<b>Decisión que tomo:</b> reglas explícitas de desconexión y resguardo desde el día uno ante cualquier denuncia.", "<b>Conversación que sostengo:</b> con las jefaturas: qué conducta no se tolera, traiga los resultados que traiga.", "<b>Métrica que reviso:</b> uso y confianza en los canales; denuncias atendidas en plazo.", "<b>Fecha de seguimiento:</b> revisión trimestral, con o sin denuncias.", "<b>Responsable:</b> quien lidera Personas, con respaldo visible de la dirección."]}, {"t": "tier", "color": "#3f8e8a", "title": "I — Intervenir conversaciones y prioridades", "when": "La conversación que vienes postergando es, casi siempre, la intervención más barata y más potente.", "items": ["<b>Señal que observo:</b> una conversación pendiente que llevo semanas postergando.", "<b>Decisión que tomo:</b> agendarla antes del viernes, con el protocolo E.C.O.: explorar, codiseñar, operacionalizar.", "<b>Conversación que sostengo:</b> la del alivio concreto: qué sacamos, qué se posterga, qué se queda.", "<b>Métrica que reviso:</b> acuerdos con fecha de revisión que efectivamente se revisaron.", "<b>Fecha de seguimiento:</b> la que quedó escrita en el acuerdo; sin fecha no hay acuerdo.", "<b>Responsable:</b> quien sostuvo la conversación."]}, {"t": "tier", "color": "#2f6f8f", "title": "R — Revisar métricas humanas y operativas", "when": "Lo que no se mira, se repite. Licencias, rotación y silencio también son resultados.", "items": ["<b>Señal que observo:</b> el tablero solo tiene números de negocio y ninguno de personas.", "<b>Decisión que tomo:</b> sumar al tablero quincenal las señales humanas junto a las operativas.", "<b>Conversación que sostengo:</b> con mi propio jefe o directorio: “Estos números también son resultados”.", "<b>Métrica que reviso:</b> que el tablero exista, se mire y gatille decisiones.", "<b>Fecha de seguimiento:</b> cada quince días, el mismo día del tablero.", "<b>Responsable:</b> quien presenta el tablero."]}, {"t": "tier", "color": "#7a6cae", "title": "A — Ajustar mediante pilotos", "when": "Nada de reformas épicas: prueba chico, mide, corrige y recién entonces escala.", "items": ["<b>Señal que observo:</b> ganas de lanzar una reforma gigante “de una vez por todas”.", "<b>Decisión que tomo:</b> elegir un equipo, un cambio y un plazo de 30 a 90 días. Probar chico antes de escalar.", "<b>Conversación que sostengo:</b> con el equipo piloto: qué probamos y cómo sabremos si funcionó.", "<b>Métrica que reviso:</b> el antes y el después del piloto, en un indicador humano y uno de negocio.", "<b>Fecha de seguimiento:</b> el último día del piloto, sin excepción.", "<b>Responsable:</b> quien pidió el cambio, no quien lo sufre."]}, {"t": "note", "text": "Si puedes explicar el método en una frase —mirar de verdad, rediseñar lo que desgasta y sostenerlo con decisiones medibles—, ya lo tienes. Lo demás es práctica."}];
 var mxDone=false;
 function mxRender(){
   lastReport={model:MX,title:'Matriz R.E.S.P.I.R.A. de aplicación',file:'matriz-respira'};
